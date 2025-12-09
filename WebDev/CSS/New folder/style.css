@@ -1,0 +1,32 @@
+   p,h1{
+            color: red; 
+            font-size: 50px; 
+            background-image: url(pexels-lucamusella-17567462.jpg);
+            background-size: contain;
+        }
+        p{
+            border: 2px solid green;
+        }
+
+    /* #box1{
+        height: 50px;
+        width: 800px;
+        background-color: blueviolet;
+        background-size: auto;
+    } */
+
+    #box2{
+        min-height: 50px;
+        max-height: 100px;
+        background-color: chartreuse;
+    }
+
+    #box3{
+
+        height: 100px;
+        width: 50px;
+        border: 5px solid black;
+        /* border-radius: 2px; */
+        padding: 10px;
+        margin: 5px;
+    }

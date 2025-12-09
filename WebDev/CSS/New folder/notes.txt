@@ -1,0 +1,13 @@
+
+parent   child
+ 10px      1em
+ 50px      1em
+ 100px     2em
+
+ rem  = parent(HTML)
+
+
+ Pseudo element
+
+ 1 Selector :: Properties
+ 2 Selector : State   (example make a link tag and give multipe state like hover,active,unlinked,)

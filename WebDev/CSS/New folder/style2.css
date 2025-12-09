@@ -1,0 +1,28 @@
+p{
+    text-align: center;
+    text-transform: capitalize;
+    text-decoration:overline ;
+}
+
+.anchor:link{
+     color: blue;
+}
+
+.anchor:visited{
+     color: rgb(0, 255, 21);
+}
+
+
+.anchor:hover{
+     color: rgb(255, 123, 0);
+}
+
+.anchor:active{
+     color: rgb(255, 0, 0);
+}
+
+.list{
+     list-style: square;
+     list-style-position: outside;
+     
+}

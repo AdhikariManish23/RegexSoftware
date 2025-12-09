@@ -1,0 +1,8 @@
+div{
+    background-color: aqua;
+    display: inline;
+}
+span{
+    background-color: tomato;
+    display:block;
+}
