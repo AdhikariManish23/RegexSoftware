@@ -2,7 +2,196 @@
     margin: 0px;
     padding: 0px;
 }
+nav{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(245, 248, 248);
+}
+.left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
 
-.nav{
-    margin: 20px;
+.left img {
+    height: 28px;
+    width: 28px;
+    
+}
+.menu i {
+    font-size: 22px;
+    cursor: pointer;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: rgb(83, 81, 81);
+    gap: 12px;
+}
+.right {
+    display: flex;
+    gap: 28px;
+    font-size: 20px;
+    padding-right: 5px;
+}
+.right i{
+    color: rgb(84, 94, 102);
+}
+
+/* ----------------------------next Section--------------------------- */
+
+.leftSection{
+    width: 300px;
+    height: 100vh; /* subtract approx navbar height */
+    padding-top: 10px; /* ✅ space from navbar */
+    position: sticky;
+}
+/* SIDEBAR WRAPPER */
+.sideBar {
+    display: flex;
+    flex-direction: column; /* ✅ one by one vertically */
+    gap: 18px;              /* ✅ space between each item */
+    padding: 0 20px;
+}
+
+/* EACH LINK ROW */
+.sideBar a {
+    display: flex;              /*✅ icon + text in row*/
+    align-items:center;
+    gap: 14px;                  /* ✅ space between icon & text */
+    text-decoration: none;
+    color: rgb(55, 55, 55);
+    font-size: 16px;
+    padding: 12px 14px;
+    border-radius: 8px;
+    /* transition: background 0.2s ease; */
+}
+.sideBar a i,
+.sideBar a span {
+    font-size: 22px;
+}
+
+/* TEXT */
+.sideBar a h4 {
+    font-weight: 500;
+}
+
+/* HOVER EFFECT */
+.sideBar a:hover {
+    background-color: rgba(0, 0, 0, 0.08);
+}
+
+
+/*------------------------------main body----------------------- */
+.container {
+    display: flex;
+}
+
+  .cardList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style: none;
+}
+
+.card {
+    width: 300px;
+    height: 250px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #d0d0d0;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER */
+.card-header.bg-cpp{
+    background-image: url(image1.jpg);
+    height: 100px;
+    padding: 12px;
+    color: white;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+
+.card-header.bg-ds{
+    background-image: url(image2.jpg);
+    height: 100px;
+    padding: 12px;
+    color: white;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+.card-header.bg-ks{
+    background-image: url(image3.jpg);
+    height: 100px;
+    padding: 12px;
+    color: white;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+.card-header.bg-pl{
+    background-image: url(image4.jpg);
+    height: 100px;
+    padding: 12px;
+    color: white;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+.card-header.bg-ms{
+    background-image: url(image5.jpg);
+    height: 100px;
+    padding: 12px;
+    color: white;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+
+.card-title h3 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.card-title p {
+    font-size: 13px;
+}
+
+/* AVATAR */
+.card-avatar {
+    width: 60px;
+    height: 60px;
+    background: #62b324;
+    border-radius: 50%;
+    position: absolute;
+    right: 12px;
+    bottom: -30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* BODY */
+.card-body {
+    flex: 1;
+}
+
+/* FOOTER */
+.card-footer {
+    padding: 12px;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 20px;
+    /* border top bhi smjhna hai  */
+    border-top: 1.5px solid #bebcbc; 
 }

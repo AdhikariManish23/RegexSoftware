@@ -48,7 +48,7 @@ int main()
 
     // cout << "Sum is : " << sum;
 
-    // Question 56
+    // Question 56  (iska function top per hai)
     // string s1, s2, s3;
 
     // cout << "Enter first string: ";
@@ -145,29 +145,26 @@ int main()
     //     cout << num << " is NOT a Prime number";
 
     // Question 62
-    //  int n;
-    //  printf("Enter the Number : ");
-    //  scanf("%d", &n);
+    int n;
+    cout << "Enter the Number: ";
+    cin >> n;
 
-    // int reverse = 0; // to store the new number
-    // int temp;        // to store the duplicate of 'N'
-    // int duplicate = n;
+    int reverse = 0;
+    int temp;
+    int duplicate = n;
 
-    // while (n > 0)
-    // {
-    //     temp = n % 10;
-    //     reverse = (reverse * 10) + temp;
-    //     n = n / 10;
-    // }
+    while (n > 0) {
+        temp = n % 10;
+        reverse = (reverse * 10) + temp;
+        n = n / 10;
+    }
 
-    // if (reverse == duplicate)
-    // {
-    //     printf("Number is Pallindrome");
-    // }
-    // else
-    // {
-    //     printf("Number is Not Pallindrome");
-    // }
+    if (reverse == duplicate) {
+        cout << "Number is Palindrome";
+    } else {
+        cout << "Number is Not Palindrome";
+    }
+
 
     // Question 63
     // int n;
@@ -314,7 +311,7 @@ int main()
         n = m % n;
         m = temp;
     }
-    printf("%d ", m);
+    cout<<m;
 
     // agar yaha hum 'n' print krwate to vo remainder print krta jo ki 0 hai kyu ki reaminder baad he baad mai divisor banta hai
     // 'm' kya hai divisor jo ki dividend banta hai baad mai isliye hum ko dividend print krna hota hai

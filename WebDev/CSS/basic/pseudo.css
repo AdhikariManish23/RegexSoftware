@@ -1,0 +1,30 @@
+/* Hover Example */
+.btn:hover {
+    background-color: rgb(43, 177, 204);
+    color: rgb(229, 77, 77);
+}
+
+/* Active Example */
+.btn:active {
+    background-color: darkgreen;
+}
+
+.btn:visited{
+     background-color: aqua;
+}
+/* Focus Example */
+input:focus {
+    border: 2px solid blue;
+    outline: none;
+}
+
+/* Visited Example */
+a:visited {
+    color: rgb(217, 95, 217);
+}
+a:hover{
+     background-color: chartreuse;
+}
+a:active{
+     background-color: coral;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Flex Layout</title>
+    <style>
+/* Reset box model so padding/border are included in width */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Container: flex and wrap */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;         /* spacing between boxes */
+  padding: 20px;
+  align-items: stretch;
+}
+
+/* Box base styles */
+.box {
+  background: #3498db;
+  color: white;
+  padding: 24px;
+  text-align: center;
+  border-radius: 8px;
+  /* Default: mobile (1 column) */
+  flex: 0 0 100%;    /* do not grow/shrink, take full width */
+}
+
+/* Tablet: 2 columns */
+@media (min-width: 600px) {
+  .box {
+    flex: 0 0 calc(50% - 10px); /* subtract half the gap to avoid wrap */
+  }
+}
+
+/* Desktop: 3 columns */
+@media (min-width: 992px) {
+  .box {
+    flex: 0 0 calc(33.3333% - 13.3333px); /* subtract gap fraction */
+  }
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="box">Column 1</div>
+        <div class="box">Column 2</div>
+        <div class="box">Column 3</div>
+    </div>
+
+</body>
+</html>

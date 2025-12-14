@@ -2,6 +2,7 @@
 using namespace std;
 vector<int> solution(int left, int right)
 {
+    // Self disible Number 
     vector<int> ans; // to store result
 
     for (int num = left; num <= right; num++)
