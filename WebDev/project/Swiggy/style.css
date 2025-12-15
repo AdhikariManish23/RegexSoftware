@@ -1,0 +1,93 @@
+ * {
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        nav {
+            background-color: rgb(255, 82, 0);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 32px 170px;
+        }
+
+        img {
+            height: 50px;
+            width: 250px;
+            object-fit: contain;
+        }
+
+        .rightSide {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .rightSide a {
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+        
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        #app{
+            text-size-adjust: 2;
+            display: flex;
+            justify-content: center;
+            height: 50px;
+            width: 150px;
+            border: 1px solid rgb(254, 254, 254);
+            padding: 6px 14px;
+            border-radius: 15px;
+        }
+
+        .signIn {
+            background-color: rgb(0, 0, 0);
+            display: flex;
+            justify-content: center;
+            height: 50px;
+            width: 130px;
+            border: 1px solid rgb(0, 0, 0);
+            padding: 6px 14px;
+            border-radius: 15px;
+        }
+        /* Bottome banner */
+.banner {
+    height: 650px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(255, 82, 0); /* Swiggy orange */
+}
+
+/* Left Image */
+.banner-left {
+    height: 450px;
+    width: 250px;
+    background-image: url("photo/backimg1.avif");
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+}
+
+/* Right Image */
+.banner-right {
+    height: 450px;
+    width: 250px;
+    background-image: url("photo/backright.avif");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right center;
+    
+}
+.text123{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 150px;
+}
+.text-wr{
+    color: white;
+    
+}
