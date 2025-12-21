@@ -1,106 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Swiggy Navbar</title>
-    <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="style.css">
-   
-   <!-- <style>
-        * {
-            margin: 0;
-            box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Swiggy Clone</title>
 
-        nav {
-            background-color: rgb(255, 82, 0);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 32px 170px;
-        }
-
-        img {
-            height: 50px;
-            width: 250px;
-            object-fit: contain;
-        }
-
-        .rightSide {
-            display: flex;
-            align-items: center;
-            gap: 25px;
-        }
-
-        .rightSide a {
-            font-weight: 700;
-            color: white;
-            text-decoration: none;
-        
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-        #app{
-            text-size-adjust: 2;
-            display: flex;
-            justify-content: center;
-            height: 50px;
-            width: 150px;
-            border: 1px solid rgb(254, 254, 254);
-            padding: 6px 14px;
-            border-radius: 15px;
-        }
-
-        .signIn {
-            background-color: rgb(0, 0, 0);
-            display: flex;
-            justify-content: center;
-            height: 50px;
-            width: 130px;
-            border: 1px solid rgb(0, 0, 0);
-            padding: 6px 14px;
-            border-radius: 15px;
-        }
-        /* Bottome banner */
+<!-- Icons -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<link rel="stylesheet" href="style.css">
 
 
-    </style> -->
 </head>
+
 <body>
 
-<header class="container1">
-    <nav>
-        <a href="#">
-            <img src="photo/swiggy_logo_white.avif" alt="Swiggy Logo">
+<!-- NAVBAR -->
+<nav>
+    <img src="photo/swiggy_logo_white.avif" alt="Swiggy">
+    <div class="rightSide">
+        <a href="#">Swiggy Corporate</a>
+        <a href="#">Partner With Us</a>
+        <a href="#" id="app">
+            Get the app
+            <span class="material-symbols-outlined">call_made</span>
         </a>
-
-        <div class="rightSide">
-            <a href="#">Swiggy Corporate</a>
-            <a href="#">Partner With Us</a>
-
-            <a href="#" id="app">
-                Get the app
-                <span class="material-symbols-outlined">
-call_made
-</span>
-            </a>
-
-            <a href="#" class="signIn">Sign In</a>
-        </div>
-    </nav>
-</header>
-
-<!-- bottom baaner -->
-<div class="banner">
-    <div class="banner-left"></div>
-    <div class="text123">
-        <div class="text-wr">Order food & groceries. Discover best restaurants. Swiggy it!</div>
+        <a href="#" class="signIn">Sign In</a>
     </div>
+</nav>
+
+<!-- BANNER -->
+<section class="banner">
+    <div class="banner-left"></div>
+
+    <div class="banner-center">
+        <h1>Order food & groceries. Discover best restaurants. Swiggy it!</h1>
+
+        <div class="info">
+            <div class="location">
+                <i class="bi bi-geo-alt-fill"></i>
+                <input type="text" placeholder="Enter your delivery location">
+                <i class="bi bi-chevron-down" style="color:black"></i>
+            </div>
+
+            <div class="restaurants-search">
+                <input type="text" placeholder="Search for restaurant, item or more">
+                <i class="bi bi-search"></i>
+            </div>
+        </div>
+    </div>
+
     <div class="banner-right"></div>
+</section>
+
+<!-- SERVICES -->
+<!-- SERVICES IMAGES -->
+<section class="services">
+    <img src="photo/num1.avif" alt="Food Delivery">
+    <img src="photo/num2.avif" alt="Instamart">
+    <img src="photo/num3.avif" alt="Dineout">
+</section>
+
+<h2 id="food_heading">Order our best food option</h2>
+<div class="food_options">
+        <img src="photo/Biryani.avif" alt="">
+        <img src="photo/Burger.avif" alt="">
+        <img src="photo/Cake.avif" alt="">
+        <img src="photo/Chole Bhature.avif" alt="">
+        <img src="photo/Coffee.avif" alt="">
+        <img src="photo/Ice Cream.avif" alt="">
+        <img src="photo/Dosa.avif" alt="">
+        <img src="photo/Idli.avif" alt="">
+        <img src="photo/Khichdi.avif" alt="">
+        <img src="photo/Paratha.avif" alt="">
+        <img src="photo/Pastry.avif" alt="">
+        <img src="photo/Pizza.avif" alt="">
+        <img src="photo/Rolls.avif" alt="">
+        <img src="photo/Tea.avif" alt="">
 </div>
+
+
+<h2 id="grocery_heading">Shop groceries on Instamart</h2>
+<div class="groceries_option">
+    <div class="grocery_item">
+        <img src="photo/vegetable.avif">
+        <p>Vegetables</p>
+    </div>
+    <div class="grocery_item">
+        <img src="photo/fruits.avif">
+        <p>Fruits</p>
+    </div>
+    <div class="grocery_item">
+        <img src="photo/Dairy.avif">
+        <p>Dairy</p>
+    </div>
+    <div class="grocery_item">
+        <img src="photo/masala.avif">
+        <p>Masala</p>
+    </div>
+    <div class="grocery_item">
+        <img src="photo/lays.avif">
+        <p>Snacks</p>
+    </div>
+    <div class="grocery_item">
+        <img src="photo/rice.avif">
+        <p>Rice & Grains</p>
+    </div>
+    <div class="grocery_item">
+        <img src="photo/cold_Drink.avif">
+        <p>Cold Drinks</p>
+    </div>
+</div>
+
+
+<div class="bottom_banner">
+    <img src="photo/bottom_banner.avif" alt="">
+</div>
+
+<!-- footer part start -->
+<section class="cities_section">
+    <!-- Food Delivery Cities -->
+    <h2 class="cities_heading">Cities with food delivery</h2>
+
+    <div class="cities_list">
+        <div class="city_card">Order food online in Bangalore</div>
+        <div class="city_card">Order food online in Gurgaon</div>
+        <div class="city_card">Order food online in Hyderabad</div>
+        <div class="city_card">Order food online in Delhi</div>
+
+        <div class="city_card">Order food online in Mumbai</div>
+        <div class="city_card">Order food online in Pune</div>
+        <div class="city_card">Order food online in Kolkata</div>
+        <div class="city_card">Order food online in Chennai</div>
+
+        <div class="city_card">Order food online in Ahmedabad</div>
+        <div class="city_card">Order food online in Chandigarh</div>
+        <div class="city_card">Order food online in Jaipur</div>
+
+        <div class="city_card show_more">
+            Show More
+            <span class="arrow">⌄</span>
+        </div>
+    </div>
+
+    <!-- Grocery Delivery Cities -->
+    <h2 class="cities_heading">Cities with grocery delivery</h2>
+
+    <div class="cities_list">
+        <div class="city_card">Order grocery delivery in Bangalore</div>
+        <div class="city_card">Order grocery delivery in Gurgaon</div>
+        <div class="city_card">Order grocery delivery in Hyderabad</div>
+        <div class="city_card">Order grocery delivery in Delhi</div>
+
+        <div class="city_card">Order grocery delivery in Mumbai</div>
+        <div class="city_card">Order grocery delivery in Pune</div>
+        <div class="city_card">Order grocery delivery in Kolkata</div>
+        <div class="city_card">Order grocery delivery in Chennai</div>
+
+        <div class="city_card">Order grocery delivery in Ahmedabad</div>
+        <div class="city_card">Order grocery delivery in Chandigarh</div>
+        <div class="city_card">Order grocery delivery in Jaipur</div>
+
+        <div class="city_card show_more">
+            Show More
+            <span class="arrow">⌄</span>
+        </div>
+    </div>
+</section>
+<!-- Final Footer part -->
+<footer class="swiggy_footer">
+    <div class="footer_top">
+        <!-- Logo Column -->
+        <div class="footer_col brand">
+            <div class="logo">
+
+                <span>Swiggy</span>
+            </div>
+            <p>© 2025 Swiggy Limited</p>
+        </div>
+
+        <!-- Company -->
+        <div class="footer_col">
+            <h4>Company</h4>
+            <a href="#">About Us</a>
+            <a href="#">Swiggy Corporate</a>
+            <a href="#">Careers</a>
+            <a href="#">Team</a>
+            <a href="#">Swiggy One</a>
+            <a href="#">Swiggy Instamart</a>
+            <a href="#">Swiggy Dineout</a>
+            <a href="#">Minis</a>
+            <a href="#">Pyng</a>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer_col">
+            <h4>Contact us</h4>
+            <a href="#">Help & Support</a>
+            <a href="#">Partner With Us</a>
+            <a href="#">Ride With Us</a>
+
+            <h4 class="mt">Legal</h4>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Cookie Policy</a>
+            <a href="#">Privacy Policy</a>
+        </div>
+
+        <!-- Cities -->
+        <div class="footer_col">
+            <h4>Available in:</h4>
+            <a href="#">Bangalore</a>
+            <a href="#">Gurgaon</a>
+            <a href="#">Hyderabad</a>
+            <a href="#">Delhi</a>
+            <a href="#">Mumbai</a>
+            <a href="#">Pune</a>
+
+            <select class="city_dropdown">
+                <option>685 cities</option>
+            </select>
+        </div>
+
+        <!-- Life at Swiggy -->
+        <div class="footer_col">
+            <h4>Life at Swiggy</h4>
+            <a href="#">Explore With Swiggy</a>
+            <a href="#">Swiggy News</a>
+            <a href="#">Snackables</a>
+
+            <h4 class="mt">Social Links</h4>
+            <div class="social_icons">
+                <i class="bi bi-linkedin"></i>
+                <i class="bi bi-instagram"></i>
+                <i class="bi bi-facebook"></i>
+                <i class="bi bi-pinterest"></i>
+                <i class="bi bi-twitter-x"></i>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+   
+</footer>
 
 </body>
 </html>
