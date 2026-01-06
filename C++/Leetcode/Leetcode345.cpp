@@ -1,9 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// check the error
-// you have to
-
 bool isVowel(char key)
 {
     string vowel = "aeiouAEIOU";
@@ -19,12 +16,11 @@ string reverseVowels(string s)
 {
     int i = 0;
     int j = s.length() - 1;
-    while (i < j)
+    while (i < j) 
     {
-        while (i < j && !isVowel(s[i]))
-            i++;
-        while (i < j && !isVowel(s[j]))
-            j--;
+        while (i < j && !isVowel(s[i]))  i++;
+
+        while (i < j && !isVowel(s[j]))  j--;
 
         swap(s[i], s[j]);
         i++;
@@ -35,6 +31,6 @@ string reverseVowels(string s)
 
 int main()
 {
-    string str = "Leetcode";
+    string str = "leetcode";
     cout << reverseVowels(str);
 }
