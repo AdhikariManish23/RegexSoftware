@@ -45,3 +45,43 @@ int main()
         }
     }
 }
+
+
+// ---------------------------------------------------------------------------------------------------------------------------------
+
+// #include <bits/stdc++.h>
+// using namespace std;
+
+// int main() {
+//     int customer;
+//     cout << "Enter No. of customers: ";
+//     cin >> customer;
+
+//     string names[customer] = {};
+//     int units[customer] = {};
+//     int bills[customer] = {};
+
+//     for(int i=0; i<customer; i++) {
+//         cout << "Enter customer name: ";
+//         cin >> names[i];
+
+//         cout << "Enter unit: ";
+//         cin >> units[i];
+
+//         if(units[i] <= 100) bills[i] = units[i] * 5;
+//         else if(units[i] > 100 || units[i] <= 300) bills[i] = units[i] * 7;
+//         else if(units[i] > 300) bills[i] = units[i] * 10;
+
+//         if(bills[i] > 2000) {
+//             int surcharge = (bills[i] * 5)/100;
+//             bills[i] += surcharge;
+//         }
+//     }
+
+//     cout << "Customers bill list: " << endl;
+//     for(int i=1; i<=customer; i++) {
+//         cout << i << ". " << names[i] << ", Unit: " << units[i] << ", Bill: " << bills[i] << endl;
+//     }
+
+//     return 0;
+// }
