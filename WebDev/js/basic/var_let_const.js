@@ -66,10 +66,15 @@
 // 3
 // On the basis of hoisting
 
-console.log(a);
+// console.log(a);
 
 // var a = 1;
-let a; 
+// let a; 
 // let a = 2; Cannot access 'a' before initialization
+
+
+
+
+console.log("manish adhikari");
 
 
