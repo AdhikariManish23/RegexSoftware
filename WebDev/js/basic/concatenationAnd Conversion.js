@@ -55,17 +55,8 @@ It checks:
  console.log("5" - "2");
  console.log("10" * "2");
 
-// 1 38. console.log("5" - true);
-// 1 39. console.log(true + true);
-// 1 40. console.log(null + 1);
-// 1 41. console.log(undefined + 1);
-// 1 42. console.log("5" == 5);
-// 1 43. console.log("5" === 5);
-// 1 44. console.log(0 == false);
-// 1 45. console.log(0 === false);
-// 1 46. console.log(+"5");
-// 1 47. console.log(+true);
-// 1 48. console.log(+[]);
+
+ 
 
 
 
