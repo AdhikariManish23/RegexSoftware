@@ -105,8 +105,48 @@
 // let x = Math.random()*10000;
 // console.log(Math.floor(x));
 
-console.log(Math.floor(Math.random() * 10));
+// console.log(Math.floor(Math.random() * 10));
 
+// Math max AND min
+// console.log(Math.max(23,54,76,12));
+// console.log(Math.max(-23,54,-76,12));
+// console.log(Math.min(23,54,76,12));
+// console.log(Math.min(23,-54,76,-12));
+
+// math.pow ---(calculate power)
+// console.log(Math.pow(2,4));
+
+// math.sqrt (square root)
+// console.log(Math.sqrt(16));
+// console.log(Math.sqrt(13));
+
+// math.cbrt ---- (calculate cube root)
+// console.log(Math.cbrt(8));
+// console.log(Math.cbrt(125));
+
+
+// Converting number into string
+// let a = 10;
+// let b = a.toString()
+// console.log(typeof a);
+// console.log(typeof b);
+// let i = 20;
+// let y = String(i);
+// console.log(typeof y);
+
+
+// let g = "10";
+// console.log(typeof +g); // by adding + it convert string into number
+
+// let k = "10"; 
+// console.log(typeof k); // string
+
+// let l = 10;
+// console.log(typeof +l); //number
+
+
+// math.sign
+console.log(Math.sign(-5));
 
 
 

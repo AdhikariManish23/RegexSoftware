@@ -1,4 +1,5 @@
-// if conditions
+// prompt you cannot use in terminal 
+
 
 // let name  = prompt("enter a name ");
 // if(name === "manish"){
