@@ -16,15 +16,15 @@
 16. Find the last character of a string
 17. Convert entire string to uppercase
 18. Convert entire string to lowercase
-19. Remove all special characters from a string
+19. Remove all special characters from a string ????
 20. Count number of uppercase letters
 21. Count number of lowercase letters
 22. Reverse a string word by word
-23. Check if two strings have same length
+23. Check if two strings have same length ???
 24. Copy one string into another without using inbuilt function
-25. Find ASCII value of each character
+25. Find ASCII value of each character   ??
 26. Count number of spaces in a string
 27. Check whether string starts with a vowel
 28. Check whether string ends with a consonant
 29. Find middle character of a string
-30. Replace all vowels with #
+30. Replace all vowels with # 

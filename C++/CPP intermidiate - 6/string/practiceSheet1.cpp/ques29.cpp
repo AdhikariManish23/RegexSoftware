@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-
+// Finda middle character of a string 
 int main(){
     string s = "abcdef";
 

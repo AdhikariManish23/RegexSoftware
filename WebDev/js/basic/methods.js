@@ -146,7 +146,7 @@
 
 
 // math.sign
-console.log(Math.sign(-5));
+// console.log(Math.sign(-5));
 
 
 

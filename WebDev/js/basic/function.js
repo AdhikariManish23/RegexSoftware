@@ -34,19 +34,43 @@
 
 // evenOrOdd(7)
 
-function countDigit(b){
+// function countDigit(b){
     
-    let count = 0;
-    while(b> 0){
-    count+=1;
-    let digit = b %10;
+//     let count = 0;
+//     while(b> 0){
+//     count+=1;
+//     let digit = b %10;
     
-    b = (b-digit) / 10;
+//     b = (b-digit) / 10;
+    
+// }
+// return count;
+// }
+
+// console.log(countDigit(243232));
+
+
+// Arrow Functions
+
+// let abs = (a,b) => a*b
+// console.log(abc(10,20));
+
+// let abs = a => a*a
+// console.log(abc(10));
+
+// let abs = (a,b) => {
+//   return a*b }
+// console.log(abc(10,20));
+
+// IIFE (immediately invoke function express)               
+// (function () {
+//     console.log("Hello");
+    
+// })();
+
+// 7. rest parameter function or spread
+function abs(...a){
+    console.log(a);
     
 }
-return count;
-}
-
-console.log(countDigit(243232));
-
-
+abs(10,20,30,40)
