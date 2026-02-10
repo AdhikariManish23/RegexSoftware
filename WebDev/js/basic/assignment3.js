@@ -43,14 +43,65 @@
 // console.log(Number.isFinite(34));
 
 // 9
-let a = 23;
-console.log(typeof a);
+// let a = 23;
+// console.log(typeof a);
 
-let c = a.toString();
-console.log(typeof c);
+// let c = a.toString();
+// console.log(typeof c);
 
+// 10
+// let a = 10
+// let b = 20
+// let c = 30
+// console.log(Math.max(a,b,c));
 
+// 11
+// let a = 10
+// let b = 20
+// let c = 30
+// console.log(Math.min(a,b,c));
 
+// 12
+// console.log(Math.random());
 
+// 13
+// console.log(Math.floor(Math.random()*10));
+
+// 14
+function checkNumber(n) {
+    if (n > 0) return "Positive";
+    if (n < 0) return "Negative";
+    return "Zero";
+}
+
+// 15
+// let a = 23.76;
+// console.log(Math.floor(a));
+
+// function floatToInt(n) {
+//     return Math.trunc(n); // removes decimal part
+// }
+
+//16
+function squareRoot(n) {
+    return Math.sqrt(n);
+}
+
+//17
+function power(base, exp) {
+    return Math.pow(base, exp);
+}
+
+// 18. Round to 2 decimal places
+let a  =123.3495
+console.log(a.toFixed(2));
+function roundTwoDecimals(n) {
+    return Number(n.toFixed(2));
+}
+
+// 19. Random integer between 50 and 100
+function random50to100() {
+    return Math.floor(Math.random() * 51) + 50;
+}
 
 
