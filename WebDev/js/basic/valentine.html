@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Valentine 💕</title>
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    background: #ffe6f0;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Glow border */
+.glow {
+    padding: 3px;
+    border-radius: 25px;
+    background: linear-gradient(45deg,#ff9a9e,#fad0c4,#fbc2eb,#a6c1ee);
+    background-size: 300% 300%;
+    animation: glowMove 6s infinite;
+}
+
+@keyframes glowMove {
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+.card {
+    background: white;
+    width: 95%;
+    max-width: 380px;
+    border-radius: 22px;
+    padding: 25px;
+    text-align: center;
+}
+
+h1 {
+    color: #ff4d88;
+    font-size: 22px;
+}
+
+.small {
+    font-size: 14px;
+    color: #888;
+    margin: 10px 0 15px 0;
+    font-style: italic;
+}
+
+.unlock {
+    font-size: 13px;
+    color: #ff66a3;
+    animation: pulse 1.5s infinite;
+    margin-bottom: 15px;
+}
+
+@keyframes pulse {
+    0%{opacity:0.4;}
+    50%{opacity:1;}
+    100%{opacity:0.4;}
+}
+
+button {
+    padding: 12px 22px;
+    border-radius: 25px;
+    border: none;
+    font-size: 16px;
+    margin: 8px;
+    cursor: pointer;
+}
+
+#yesBtn {
+    background: #ff4d88;
+    color: white;
+}
+
+#noBtn {
+    background: #ddd;
+    position: relative;
+}
+
+#celebrationSection {
+    display: none;
+}
+
+#celebrationSection h2 {
+    color: #ff3399;
+}
+
+.image-section img {
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 15px;
+}
+
+/* Fade animation */
+.fade {
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {opacity:0;}
+    to {opacity:1;}
+}
+
+</style>
+</head>
+
+<body>
+
+    
+
+<div class="glow" id="proposalWrapper">
+<div class="card">
+
+    <h1>PRADHI 💖<br>Will You Be My Valentine?</h1>
+
+    <div class="small">
+        You make my world brighter every single day ✨
+    </div>
+
+    <div class="unlock">Press YES to unlock your surprise 💝</div>
+
+    <button id="yesBtn">YES 💕</button>
+    <button id="noBtn">NO 😅</button>
+
+</div>
+</div>
+
+
+<div class="glow" id="celebrationSection">
+<div class="card fade">
+
+    <h2>I KNEW YOU LOVE ME BABY 💘</h2>
+
+    <img src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" width="180">
+
+    <div class="image-section">
+        <!-- Add your images here -->
+        <!-- <img src="image1.jpg"> -->
+        <!-- <img src="image2.jpg"> -->
+    </div>
+
+</div>
+</div>
+
+<!-- 🎵 Add your Bollywood song here -->
+<audio id="bgMusic" loop>
+    <!-- Replace below link with your own MP3 -->
+    <source src="YOUR_SONG_LINK.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+
+/* Move NO button */
+const noBtn = document.getElementById("noBtn");
+
+noBtn.addEventListener("mouseover", moveButton);
+noBtn.addEventListener("click", moveButton);
+
+function moveButton() {
+    const x = Math.random() * 100 - 50;
+    const y = Math.random() * 60 - 30;
+    noBtn.style.transform = `translate(${x}px, ${y}px)`;
+}
+
+/* YES click */
+document.getElementById("yesBtn").addEventListener("click", function() {
+
+    document.getElementById("proposalWrapper").style.display = "none";
+    document.getElementById("celebrationSection").style.display = "block";
+
+    const music = document.getElementById("bgMusic");
+    music.play().catch(() => {
+        alert("Tap anywhere to start the music 🎵");
+    });
+
+});
+
+</script>
+
+</body>
+</html>
