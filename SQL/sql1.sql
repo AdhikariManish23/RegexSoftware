@@ -81,3 +81,8 @@ join country where lan.countrycode = country.code and language = 'english';
 -- using the new syntax
 select lan.language , country.name from countrylanguage as lan
 inner join country on lan.countrycode = country.code where language = 'english';
+
+
+
+
+
