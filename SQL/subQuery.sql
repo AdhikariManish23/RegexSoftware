@@ -57,3 +57,28 @@ select customer_id from payment where payment_id = 3 or payment_id = 250;
 
 select * from payment where customer_id in (select customer_id from payment where payment_id = 3 or payment_id = 250);
 
+use sakila;
+select * from payment;
+
+-- Q10 get all the payment information where the amount is greater than  amount of payment id 1 and 3
+select * from payment where amount >any (select amount from payment where payment_id = 1 or payment_id = 3); 
+
+-- Q11 get all the payment information where the amount is greater than amongst all the payments of customer id 1
+select * from payment where amount >all (select amount from payment where customer_id = 1); 
+
+
+use world;
+select * from country;
+
+-- Q12 give me the information of those countries whose region is same as of all regions of europe.
+select region from country where continent = 'europe';
+select * from country where region =any (select region from country where continent = 'europe');
+
+
+-- Q13 get me all the country name whose population = the highest population of europe
+select max(population) from country where continent = 'europe';
+select name from country where population = (select max(population) from country where continent = 'europe');
+
+-- Q14 get me all the country information whose population is greater among all the population of africa
+select population from country where continent  = 'africa';
+select * from country where population >all (select population from country where continent  = 'africa');

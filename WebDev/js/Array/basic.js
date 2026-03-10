@@ -279,7 +279,6 @@
 // console.log(arr1);
 
 
-
 // 26. for...of
 // let abc = [1,2,3,4];
 // for(let val of abs){
@@ -300,20 +299,78 @@
 // console.log(abc2);
 
 
-// 29. spread operaotr to extract (...) 
-// function abc(a,b){
-//     console.log(a,b);
-    
+// 29. SPREAD operaotr to extract (...) 
+// a. spread With Array
+// let arr = [1, 2, 3];
+// console.log(...arr);
+
+// b. Copying Array
+// let a = [1,2,3];
+// let b = [...a];
+// console.log(b);
+
+// c. merging Arrays
+// let a = [1,2];
+// let b = [3,4];
+// let c = [...a, ...b];
+// console.log(c);
+
+// d. spread in FUNCTIONS
+// function add2(a, b, c) {
+//   return a + b + c;
 // }
-// let arr = [10,20]
-// abc(...arr)
+// let nums = [1,2,3]
+// console.log(add(1, 2, 3)); // 6
+//console.log(add2(...nums)); // with spread operator it collects all data of you array there no need to give individual input BUT in functions you must declare the same number of parameter that in your Array
 
 
-// 30. rest operator used to collect values(...)
-// function abc(a,b){
-//     console.log(a,b);
-    
+// 30. REST operator used to collect values(...)
+
+// function abc(...abc){
+//     console.log(abc);
 // }
-// let arr = [10,20,30,40]
+// let arr=[10,20,30,40]
+// // console.log(arr);
 // abc(arr)
 
+
+
+// SHALLOW Copy
+
+// let arr1 = [10,20,30,40]
+
+// // let arr2 = [...arr1]
+// let arr2 = arr1
+// arr1[2]= 90
+// // arr1[2][0]=100;
+// console.log(arr1);
+// console.log(arr2);
+
+
+// DEEP Copy
+
+// let arr1 = [10,20,[30,40]]
+// let arr2 = structuredClone(arr1)
+// arr1[2][0]= 90
+// console.log(arr1);
+// console.log(arr2);
+
+
+//  DESTRUCTURING --->
+
+let arr=[10,20,30,40]
+
+// type - 1
+// let [a,b,c,d]=arr
+// console.log(a);
+// console.log(b);
+// console.log(c);
+// console.log(d);
+
+// type - 2
+// let [first,second,...abc]=arr1
+// console.log(first,second,abc);
+
+// type-3
+// let [first, ,second] = arr1
+// console.log(second);

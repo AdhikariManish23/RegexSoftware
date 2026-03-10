@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-    
+    // “Given a 2D array (matrix), find the maximum sum among all rows.”
     int main(){
         vector<vector<int>>v = {{1,2,3},{4,5,6},{5,10,8}};
 
