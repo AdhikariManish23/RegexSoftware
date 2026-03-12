@@ -79,3 +79,24 @@ avg(amount) over(partition by customer_name) as avg_purchase_amount from sales) 
 select * , avg(amount) over(partition by customer_name) as result from
  (select *,avg(amount) over() amt from sales) as t where amount > amt;
 
+
+use windowdb;
+select * from  sales;
+-- roll_number window function
+select *, row_number() over(partition by customer_name order by amount desc) from sales;
+
+-- rank window function
+select *, rank() over(order by amount desc) from sales;
+
+-- dense_rank()
+select *, dense_rank() over( order by customer_name) from sales;
+
+-- Q1 Get the 2nd highest amount of each Customer 
+select * from 
+(select *, dense_rank() over(partition by customer_name order by amount desc) as ran from sales) as raju where ran = 2;
+
+-- Q2 Running Total for each Customer
+
+select *, sum(amount) over(partition by customer_name order by sale_id)  from 
+(select *, dense_rank() over(partition by customer_name order by amount ) as chu from sales) as ranking;
+

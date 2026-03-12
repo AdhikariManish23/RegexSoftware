@@ -41,3 +41,9 @@ INSERT INTO orders VALUES
 (28,106,228,'Electronics','2024-02-04',620,'Delhi'),
 (29,107,229,'Furniture','2024-02-05',980,'Chennai'),
 (30,108,230,'Electronics','2024-02-06',540,'Delhi');
+
+
+select * from orders;
+-- Q1 first order of every customer (on the basis of date)
+select * from
+(select *, dense_rank() over(partition by customer_id order by date(order_date)) as ranking from orders) as table1 where ranking = 1 ;
