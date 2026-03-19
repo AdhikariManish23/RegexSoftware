@@ -1,5 +1,5 @@
 create database windowdb;
-use windowdb;
+use windowdb;-- 
 
 CREATE TABLE Sales (
     sale_id INT PRIMARY KEY,

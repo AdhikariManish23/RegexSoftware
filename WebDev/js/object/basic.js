@@ -4,14 +4,16 @@
 
 // 1 literal method (basic)
 // let obj={
-//     id:10,
-//     name:"manish",
+//     null :10,
+//     name :null,
 //     course:"mern stack"
 // }
+// console.log(obj.null);
+
 
 // // 2 new keyword
 
-// // let obj = new Object()
+// let obj = new Object()
 // console.log(obj);
 
 // obj.id = 1
@@ -20,14 +22,17 @@
 // console.log(obj);
 
 // // 3 Constructor
+
+// this represent the current class object
+
 // function abc(id,name,course){
 //     this.id = id;
 //     this.name = name;
 //     this.course = course;
 // }
 
-// let obj = new abc(1,"manish","mern");
-// console.log(obj);
+// let obj3 = new abc(1,"manish","mern");
+// console.log(obj3);
 
 
 // access Object
@@ -125,23 +130,25 @@
 
 
 
-// // DESTRUCTURE
+// ***********************  Object Destructuring in JavaScript
 
-// let {id,name,course,address}=obj;
-// console.log(id,name,course,address);
-// let {id:id1,...rest}=obj
-// console.log(id1,rest);
+// let person = {
+//   name: "Manish",
+//   age: 24,
+//   city: "Delhi"
+// };
 
+// 1 Using Object Destructing
+// let {name, age} = person;
+// console.log(name, age);
 
-// let id = 1;
-// let name  = "manish"
-// let course = "mern"
-// function abc(...args){
-//     return args;
-    
-// }
-// console.log(abc(id,name,course));
+// 2 Renaming Variables
+// let {name: userName, age: userAge} = person;
+// console.log(userName, userAge);
 
+// 3 Default Values
+// let {name, phoneNo = 192} = person;
+// console.log(name, phoneNo);
 
 // **** Find Object length ****
 
@@ -306,7 +313,71 @@
 
 // **********  Nullish Coalescing Operator ************
 
-let a  = null
+// let name  = null
+// let name  = undefined
+// let name  = "manish"
 
-let b = a ?? "demo"  // What it means when u have null vlaue instead of printing null print "demo"
-console.log(b);
+// let b = name ?? "Guest"  // If u have null/undefined vlaue in variable instead of printing null print "demo"
+// console.log(b);
+
+
+
+// let name  = null
+// let name  = undefined
+// let name  = "manish"
+
+// let b = name || "Guest"  
+// console.log(b);
+
+
+
+//  ***************  Optional Chaining ********************
+// it checks value hai ki nhi apne pass
+// let obj = {
+//     name: "abc"
+// }
+// console.log(obj?.address?.city);  // undefined
+// console.log(obj?.name);  // abc
+
+
+// // With help Of nullish 
+// console.log(obj?.address?.city ?? "city not Found");  // agar nhi hota to yeah mssg print ho jayega
+
+
+// ************** traverse in Object
+
+// let obj = {
+//     id: 1,
+//     name: "manish",
+//     course: "mern"
+// };
+
+// // Key Dynamic hai ya phir key k naam mai space hai toh humko Bracket Notation use krna hai
+// for (let key in obj) {
+//     console.log(obj[key]);  // BRACKET NOTATIOn Print values
+//     console.log(key); // ONly Print Keys
+//     console.log(key,obj[key]); // it prints both key and value
+    
+    
+// }
+
+
+// ************ Symbol ************
+// Create two unique symbols with the same description "age"
+// const age1 = Symbol("age");
+// const age2 = Symbol("age");
+
+// // Create an object with both symbols as keys
+// let person = {
+//   name: "Ravi",
+//   [age1]: 25,   // first age value
+//   [age2]: 30    // second age value
+// };
+
+// // Access values using their respective symbols
+// console.log(person[age1]); // 25
+// console.log(person[age2]); // 30
+
+
+
+

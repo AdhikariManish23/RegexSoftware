@@ -10,19 +10,19 @@ int main() {
 
     // 1. Reverse column
     
-    // int row = matrix.size();
-    // int col = matrix[0].size();
+    int row = matrix.size();
+    int col = matrix[0].size();
 
-    // for(int i=0; i < row; i++){
-    //     reverse(matrix[i].begin(),matrix[i].end());
-    // }
+    for(int i=0; i < row; i++){
+        reverse(matrix[i].begin(),matrix[i].end());
+    }
 
 
     // 2. Reverse Row
 
-    for(int i = 0; i <matrix.size(); i++ ){
-        reverse(matrix.begin(),matrix.end());
-    }
+    // for(int i = 0; i <matrix.size(); i++ ){
+    //     reverse(matrix.begin(),matrix.end());
+    // }
 
     for(auto x : matrix){
         for(auto y : x){

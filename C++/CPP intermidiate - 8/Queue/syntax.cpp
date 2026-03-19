@@ -12,20 +12,20 @@ using namespace std;
         // cout<<q.size()<<endl;
         // cout<<q.empty()<<endl;
 
+// take 5 input and push in Queue after that print 
+  queue<int> q;
+    int n = 5;
 
+    for(int i = 0; i < n; i++){
+        int j;
+        cout << "enter :";
+        cin >> j;
+        q.push(j);
+    }
 
-        queue<int>q;
-        int n = 5;
-        for(int i = 1; i <= n; i++){
-            int j;
-            cin>>j;
-            q.push(j);
-        }
-
-        while(!q.empty()){
-            cout<<q.front()<<" ";
-            q.pop();
-
-        }
+    while(!q.empty()){
+        cout << q.front() << " ";
+        q.pop();
+    }
      return 0;
 }

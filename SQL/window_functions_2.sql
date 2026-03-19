@@ -47,3 +47,21 @@ select * from orders;
 -- Q1 first order of every customer (on the basis of date)
 select * from
 (select *, dense_rank() over(partition by customer_id order by date(order_date)) as ranking from orders) as table1 where ranking = 1 ;
+
+-- Use of LAG
+select *, lag(amount) over() from orders;
+select *, lag(amount,2,0) over(partition by customer_id) from orders;
+
+-- Use of LEAD
+select *, lead(amount) over() from orders;
+select *, lead(amount,1,0) over(partition by customer_id) from orders;
+
+select * from orders;
+-- Q her ek sutomer ki second highest amount
+select customer_id , amount from 
+(select *,dense_rank() over(partition by customer_id order by amount desc) as ranking from orders) as temp where ranking = 2;
+
+-- CHAT GPT Question
+select * from sales;
+-- Q1 Assign a row number to each sale ordered by sale_date.
+select * , 

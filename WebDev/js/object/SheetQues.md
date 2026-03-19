@@ -48,4 +48,65 @@ we can use 2 ways
   II : use of hasOwn Method
         console.log(Object.hasOwn(obj, "name"));
 
-10. What is the difference between primitive values and object values?
+10. What is the difference between primitive values and object values ?
+
+In JavaScript, primitive values and object values are two main types of data. The key difference is how the data is stored and copied in memory.
+A. Primitive Values : Primitive values store the actual value directly in the variable.
+Common Primitive Types : 
+number
+string
+boolean
+null
+undefined
+bigint
+symbol
+                       Primitive values are copied by value.
+EXAMPLE :
+let a = 10;
+let b = a;
+b = 20;
+console.log(a); // 10
+console.log(b); // 20
+
+B. Object Values : Object values store a reference (memory address) instead of the actual data.
+Examples of Object Types :
+Object
+Array
+Function
+Date
+                            Object values are copied by reference.
+Example
+let obj1 = { name: "Manish" };
+let obj2 = obj1;
+obj2.name = "Rahul";
+console.log(obj1.name); // Rahul
+
+11. Merge two objects using the spread operator.
+const obj1 = { a: 1, b: 2 };
+const obj2 = { b: 3, c: 4 };
+
+const merged = { ...obj1, ...obj2 };
+
+console.log(merged); // { a: 1, b: 3, c: 4 }
+
+12. Convert an array of objects into a single object.
+const arr = [{ a: 1 }, { b: 2 }, { c: 3 }];
+
+const merged = Object.assign({}, ...arr);
+
+console.log(merged); // { a: 1, b: 2, c: 3 }
+
+13. Rename a key in an object.
+
+let person = {
+  name: "Manish",
+  age: 24,
+  city: "Delhi"
+};
+
+// Rename "city" → "location"
+person.location = person.city;
+delete person.city;
+
+console.log(person);
+// { name: "Manish", age: 24, location: "Delhi" }
