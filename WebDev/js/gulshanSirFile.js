@@ -1945,7 +1945,7 @@
 // Promise Creation
 
 // let a = new Promise((resolve,reject) => {
-//     let b = true
+//     let b = true;
 //     if(b){
 //         resolve("Promise resolve")
 //     }else{
@@ -1954,7 +1954,7 @@
 // })
 // a.then((result) =>console.log(result))      // then for resolve
 //  .catch((result) =>console.log(result))     // catch for reject
-// .finally(console.log("Work Done"))         // status
+// .finally(() =>console.log("Work Done"))         // status
 
 
 // Methods
@@ -1971,16 +1971,16 @@
 // .catch(err => console.log(err)
 // )
 
-// 3. Promis.all()
+// 3. Promis.all()  is used when you want to run multiple promises in parallel and wait until all of them finish successfully.  if one promise is reject its immediately fails and show the error
 
-// let a = Promise.resolve(1)
-// let b = Promise.resolve(2)
-// let c = Promise.reject("error")
-// // let c = Promise.reject(3)
+let a = Promise.resolve(1)
+let b = Promise.resolve(2)
+let c = Promise.reject("error")
+// let c = Promise.reject(3)
 
 
-// Promise.all([a,b,c]).then( res => console.log(res))
-//         .catch(err => console.log(err))
+Promise.all([a,b,c]).then( res => console.log(res))
+        .catch(err => console.log(err))
 
 
 // 4 Promise.allSettled() provide all status of promises
@@ -2019,53 +2019,154 @@
 
 // 7 Promise Chaining
 
+// let a=new Promise((resolve,reject) => 
+// {
+//     let b=true;
+//     if(b)
+//     {
+//         resolve("Promise resolve")
+//     }
+//     else{
+//         reject("Promise reject")
+//     }
+// })
+
+// a.then(() => console.log("step1"))
+// a.then(()=>console.log("step2"))
+// a.then(()=>console.log("step3"))
+// .catch(()=>console.log("error"))
+
 // let b = Promise.resolve(5)
 // b.then((val) => val*2) // 5*2
 // .then((res) => res*2)  // 10 *2
 // .then((mno) => mno + 5) // 20 +5
 // .then(data => console.log())  // 25
 
-let a = new Promise((resolve,reject) => {
-    let b = true;
-    if(b){
-        resolve("Promise resolve")
-    }else{
-        reject("Promise reject")
-    }
-})
 
-a.then(()=> {
-    console.log("step 1");
-    throw new Error("error")
-}).catch(err) => console.log(err);
+// closer 
 
+// function outer()
+// {
+//     let a=0;
+//   return  function inner()
+//     {
+//         console.log(a);
+//         a++;
+        
+//     }
+//     inner()
+// }
 
+// let result=outer()
 
-
-
-
-
-
-
-
+//     result()
+//     result()
+//      result()
+//     result()
 
 
 
+// await
+
+// function getData()
+// {
+//     setTimeout(() => {
+//         console.log("hello javascript");
+        
+//     }, 1000);
+// }
+
+
+// async :- promise return karta hai
+
+// async function abc() {
+//     let result =await getData()
+// }
+// console.log(abc());
+
+
+// Promise types 
+
+// fetch('https://jsonplaceholder.typicode.com/todos/1')
+// .then(res=>res.json())
+// .then(data=>console.log(data))
+// .catch(err=>console.log(err))
+
+
+// async type 
+
+
+// // async function abc() {
+// //     try{
+// //         let result=await fetch('https://jsonplaceholder.typicode.com/todos')
+// //         let upadteResult = await result.json()
+// //         console.log(upadteResult)
+// //     }
+// //     catch(err)
+// //     {
+// //         console.log(err);
+        
+// //     }
+    
+// // }
+// abc()
 
 
 
+// throw method
+
+// 1
+// async function abc() {
+//     let result = false;
+//     try{
+//         if(result){
+//             throw new Error("this is Error");
+//         }
+//     }
+//     catch (err){
+        
+//         console.log(err.message);
+        
+//     }
+// }
+// abc()
+
+// 2
+// function abc(){
+//     return new Promise((res,rej) => {
+//         throw new Error("create error");
+//     })
+// }
+
+// abc().then(res=> console.log(res))
+// .catch(err => console.log(err.message))
 
 
+// Local Storage
+
+// Local Storage is a Web Storage API in JavaScript that allows you to store data in the browser permanently (until manually deleted).
+// Data stays even after:
+// Page refresh 
+// Browser restart 
+
+// we can check output using HTML file
+// NOTE : convert data into string and also save the name 
+
+// let obj = {
+//     name: "manish",
+//     age: 35
+// }
+// localStorage.setItem("user",JSON.stringify(obj))
 
 
+// let data = localStorage.getItem("user");
+// console.log(JSON.parse(data));
+// // output will show on browser terminal
 
-
-
-
-
-
-
-
+// // TO remove single item 
+// localStorage.removeItem("user")
+// // and TO delete Complete local Storage
+// localStorage.clear()
 
 
 
