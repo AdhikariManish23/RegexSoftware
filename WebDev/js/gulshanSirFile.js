@@ -1870,22 +1870,21 @@
 // Asynchronous programming, on the other hand, allows multiple tasks to run independently of each other. In asynchronous code, a task can be initiated, and while waiting for it to complete, other tasks can proceed. This non-blocking nature helps improve performance and responsiveness, especially in web applications.
 
 
-// 1
+// 1.1 setTimeout(callback, delay)
 // console.log("Hi");
 // setTimeout(() => {
 //     console.log("Geek");
 // });
 // console.log("End");
 
-// 2 
-// setTimeout(callback, delay)
+// 1.2
 // let a = setTimeout(() => {
 //     console.log("hello JS");  
 // },2000);  // 1000 ms = 1second            
 // clearTimeout(a); // it clear the timeOut and stop the setimeout function to execute 
 // NOTE : agar hum yaha 0 sec ka delay bhi daale tb bhi yeah Sychronus k baad he chlega kyu ki isko event loop se travel krna pdega 
 
-// 3 setInterval
+// 2 setInterval
 // yeah ek particular interval k baad chlta rahega 
 // let a =setInterval(()=>{
 //     console.log("Namaste JavaScript");
@@ -1935,7 +1934,7 @@
 // console.log(a);
 
 // 2. Fulfilled
-// let a= new Promise((resolve) => resolve("hello"))
+// let a= new Promise((resolve,reject) => resolve("hello"))
 // console.log(a);
 
 // let a= new Promise((resolve,reject) => reject("error"))
@@ -1945,14 +1944,15 @@
 // Promise Creation
 
 // let a = new Promise((resolve,reject) => {
-//     let b = true;
+//     let b = false; // if there is ALL Ok in Promise it return resolve otherwise return reject
 //     if(b){
 //         resolve("Promise resolve")
 //     }else{
 //         reject("Promise Reject")
 //     }
 // })
-// a.then((result) =>console.log(result))      // then for resolve
+
+// a.then((resolve) => console.log(resolve))      // then for resolve
 //  .catch((result) =>console.log(result))     // catch for reject
 // .finally(() =>console.log("Work Done"))         // status
 
@@ -1973,14 +1973,14 @@
 
 // 3. Promis.all()  is used when you want to run multiple promises in parallel and wait until all of them finish successfully.  if one promise is reject its immediately fails and show the error
 
-let a = Promise.resolve(1)
-let b = Promise.resolve(2)
-let c = Promise.reject("error")
-// let c = Promise.reject(3)
+// let a = Promise.resolve(1)
+// let b = Promise.resolve(2)
+// let c = Promise.reject("error")
+// // let c = Promise.reject(3)
 
 
-Promise.all([a,b,c]).then( res => console.log(res))
-        .catch(err => console.log(err))
+// Promise.all([a,b,c]).then( res => console.log(res))
+//         .catch(err => console.log(err))
 
 
 // 4 Promise.allSettled() provide all status of promises
@@ -2087,7 +2087,7 @@ Promise.all([a,b,c]).then( res => console.log(res))
 
 // Promise types 
 
-// fetch('https://jsonplaceholder.typicode.com/todos/1')
+// fetch('https://jsonplaceholderde.com/todos/1')
 // .then(res=>res.json())
 // .then(data=>console.log(data))
 // .catch(err=>console.log(err))
@@ -2166,7 +2166,7 @@ Promise.all([a,b,c]).then( res => console.log(res))
 // // TO remove single item 
 // localStorage.removeItem("user")
 // // and TO delete Complete local Storage
-// localStorage.clear()
+// localStorage.clear() 
 
 
 

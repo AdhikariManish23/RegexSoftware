@@ -1,53 +1,62 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
-class node{
-    public:
-    int data ;
+class node
+{
+public:
+    int data;
     node *next;
 
-    node(int val){
+    node(int val)
+    {
         data = val;
         next = NULL;
     }
-}; 
+};
+
+
 
 // print linked List
-void print(node *head){
-    node * temp = head;
-    while(temp != NULL){
-        cout<<temp-> data<<" -> ";
+void print(node *head)
+{
+    node *temp = head;
+    while (temp != NULL)
+    {
+        cout << temp->data << " -> ";
         temp = temp->next;
     }
-    cout<<"NULL"<<endl;
+    cout << "NULL" << endl;
 }
 
-
 // Insert in Front
-void insertFront(node * &head,int val){
-    node * temp = new node(val);
-    temp ->next = head;
+void insertFront(node *&head, int val)
+{
+
+
+    node *temp = new node(val);
+    temp->next = head;
     head = temp;
 }
 
-
 // Find length
-int findLength(node * head){
+int findLength(node *head)
+{
     int count = 0;
-    node * temp = head;
-    while(temp != NULL){
+    node *temp = head;
+    while (temp != NULL)
+    {
         count++;
         temp = temp->next;
     }
     return count;
-
 }
 
-
 // insert End
-void insertEnd(node * &head, int val){
-    node * newNode = new node(val);
-    node * temp = head;
-    while(temp->next != NULL){
+void insertEnd(node *&head, int val)
+{
+    node *newNode = new node(val);
+    node *temp = head;
+    while (temp->next != NULL)
+    {
         temp = temp->next;
     }
     temp->next = newNode;
@@ -55,39 +64,65 @@ void insertEnd(node * &head, int val){
 
 // insert element at given point
 
-void insertatGivenPoint(node *head,int pos,int val){
-    node * newNode = new node(val);
-    node * temp1 = head;
-    node * temp2 = head;
+void insertatGivenPoint(node *head, int pos, int val)
+{
+    node *newNode = new node(val);
+    node *temp1 = head;
+    node *temp2 = head;
 
-    int i =0;
-    while(i < pos){
+    int i = 0;
+    while (i < pos)
+    {
         temp2 = temp1;
-        temp1 =temp1 -> next;
+        temp1 = temp1->next;
         i++;
-}
+    }
 
     temp2->next = newNode;
-    newNode->next =temp1;
+    newNode->next = temp1;
 }
-    int main(){
-    
-        node *head = new node(1);
-        head->next = new node(2);
-        head->next->next = new node(3);
-        head->next->next->next = new node(4);
 
-        insertFront(head,50);
-        insertFront(head,11);
+void deletionAtGivenPoint(node *&head, int pos)
+{
+    node *slow = head;
+    node *fast = head;
 
-        insertEnd(head,87);
+    int i = 0;
+    while (i < pos)
+    {
+        slow = fast;
 
-        cout<<findLength(head);
-        cout<<endl;
-        print(head);
+        fast = fast->next;
 
-insertatGivenPoint(head,3,2000);
-print(head);
+        i++;
+    }
 
-     return 0;
+    slow->next = fast->next;
+    delete fast;
+}
+int main()
+{
+
+    node *head = new node(1);
+    head->next = new node(2);
+    head->next->next = new node(3);
+    head->next->next->next = new node(4);
+
+    insertFront(head, 50);
+    insertFront(head, 11);
+
+    insertEnd(head, 87);
+
+    cout << findLength(head);
+    cout << endl;
+    print(head);
+
+    cout << endl;
+    insertatGivenPoint(head, 3, 2000);
+    print(head);
+    cout<<endl;
+
+    deletionAtGivenPoint(head,2);
+    print(head);
+    return 0;
 }
