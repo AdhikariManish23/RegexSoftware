@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .form-card {
+      background: #fff;
+      padding: 25px;
+      width: 100%;
+      max-width: 400px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .form-card h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-top: 12px;
+      font-size: 20px;
+      color: #555;
+    }
+
+    input {
+      margin-top: 5px;
+      padding: 10px;
+      border: 3px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    input:focus {
+      border-color: #2d6a4f;
+      outline: none;
+    }
+
+    /* Gender section */
+    .gender-group {
+      margin-top: 10px;
+    }
+
+    .gender-group label {
+      margin-right: 10px;
+      font-size: 14px;
+    }
+
+    .gender-group input {
+      margin-right: 5px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #2d6a4f;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #1b4332;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-card">
+    <h2>Personal Information</h2>
+
+    <form>
+
+      <label for="firstName">First Name</label>
+      <input type="text" id="firstName" name="firstName" placeholder="Enter first name">
+
+      <label for="lastName">Last Name</label>
+      <input type="text" id="lastName" name="lastName" placeholder="Enter last name">
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Enter email">
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210">
+
+      <!-- Gender -->
+      <div class="gender-group">
+        <label>Gender:</label><br>
+
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+
+        <input type="radio" id="others" name="gender" value="others">
+        <label for="others">Others</label>
+      </div>
+
+      <label for="dob">Date of Birth</label>
+      <input type="date" id="dob" name="dob">
+
+      <label for="file">Upload File</label>
+      <input type="file" id="file" name="file">
+
+      <button type="submit">Submit</button>
+
+    </form>
+  </div>
+
+</body>
+<script>
+    let a = document.querySelector("h2");
+    a.style.color="red";
+
+</script>
+</html>
+

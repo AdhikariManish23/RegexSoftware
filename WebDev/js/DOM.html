@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="abc">Content1</div>
+    <div class="xyz">Content2</div>
+    <div class="xyz">Content3</div>
+    <p id="pg">Content 4</p>
+    <h2>Headiing 2 Change Style</h2>
+    <a href="http://google.com/?zx=1775450358044"> got to google</a> 
+
+
+    <script>
+        // let a = document.getElementById("abc");
+        // console.log(">>>>>>>>>>>>>>>>>>>>>>",a);
+
+        // let b = document.getElementsByClassName("xyz");
+        // console.log("***************",b); 
+
+        // let c = document.getElementsByTagName("div");
+        // console.log(c);
+
+        // Modern technique to Access Element
+
+        // let result1 = document.querySelector("#abc");
+        // let result2 = document.querySelector(".xyz"); // return first element
+        // let result3 = document.querySelectorAll(".xyz") // return array format
+
+        // .textContent : used to isert a text
+
+        // let result1 = document.querySelector("#abc");
+        // result1.textContent = "manish";
+
+        // .innerHTML : to insert a new html tag
+
+        //  let result1 = document.querySelector("#abc");
+        // result1.innerHTML = "<h1> Manish </h1>";
+        
+        // get and set ATTRIBUTE
+        // let print = document.querySelector("a");
+        // // console.log(print);
+        // // console.log(print.getAttribute("href"));
+        // console.log(print.setAttribute("href", "https://www.facebook.com/"))
+        
+        // change STYLE
+
+        let res = document.querySelector("h2");
+        res.style.color="red";
+        res.style.background="yellow";
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 100vh; /* justify-content: center won't work without this*/
+            align-items: center;
+        }
+    .profile-pic {
+        margin-top: 20px;
+    /* we create this container that will help us to set image within the container  */
+    width: 220px;
+    height: 220px;
+     border-radius: 50%; /* ✅ makes it a circle */
+      overflow: hidden;   /* ✅ crops the image inside the circle */
+      border: 4px solid #2d6a4f; /* ✅ nice green ring around photo */
+    }
+
+    .profile-pic img {
+
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    }
+
+    .detail{
+        margin-top: 10px;
+        text-align: center;
+    }
+    h3{
+        margin: 10px;
+    }
+
+    
+.follow {
+    margin-top: 16px;
+    text-align: center;
+}
+
+.follow button {
+    padding: 10px 32px;
+    background-color: #e49133;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.follow button:hover {
+    background-color: #e67710;
+}
+
+    </style>
+</head>
+<body>
+    <div class="card"> <!-- everything inside one card -->
+    <div class="profile-pic">
+        <img src="profile.jpg" alt="">
+      </div>
+    
+    <div class="detail">
+        <h1>Manish Adhikari</h1>
+        <h3>Developer</h3>
+    </div>
+    <div class="follow">
+        <button>Follow</button>
+    </div>
+</div>
+</body>
+</html>

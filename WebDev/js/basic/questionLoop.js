@@ -152,3 +152,13 @@ for(let i = 0; i <= 9; i++){
         console.log(i," : ",count);
     }
 }
+
+// Question : reverse a string "hello" -> "olleH" (for Of loop)
+let input = "hello";
+let output = "";
+
+for (let char of input) {
+  output = char + output;
+}
+
+console.log(output); // "olleh"

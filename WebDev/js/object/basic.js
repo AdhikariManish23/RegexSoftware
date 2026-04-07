@@ -73,42 +73,47 @@
 // console.log(obj);
 
 
-// REFERENCE
+// REFERENCE (changes in one variable affect the Other)
 
 // let obj={
 //     id:11,
 //     name:"anuj",
 //     course:"mern stack",
-//     name:"adhira"
 // }
-// let obj1 = obj;
+// let newObj = obj;
 // console.log(obj);
-// console.log(obj1);
+// newObj.name = "manish"; // here we change in newObj but it also change the obj
+// console.log(obj);
+// console.log(newObj);
 
 
-// SHALLOW COPY
+
+
+// SHALLOW COPY (A shallow copy creates a new object, but only copies the top-level properties.)
 
 // let obj={
 //     id:11,
 //     name:"anuj",
 //     course:"mern stack",
-//     name:"adhira",
 //     address:{
 //         city:"jaipur",
 //         state:"raj"
 //     }
 // }
 
-// let obj1 = {...obj}
+// let newObj = {...obj}  // by using spread operator  another method is Object.assign({},newObj)
+// console.log(obj);
 // obj.id = 23;
+// obj.name = "manish";
 // obj.address.city = "alawar" // not work on nested object
 // console.log(obj);
-// console.log(obj1);
+// console.log("New Object");
+// console.log(newObj);
 
 
 
 
-// DEEP COPY
+// DEEP COPY  (structureClone use this we achieve Deep copy and excess the nested object)
 
 // let obj={
 //     id:11,
@@ -126,6 +131,60 @@
 // obj1.address.city="karauli"   //but in deep copy it work on NESTED object
 // console.log(obj);
 // console.log(obj1);
+
+
+
+// **************** Difference Spread And Rest Operator
+// Spread Operator
+// 1
+// const arr = [1,2,3,4];
+// console.log(arr); // here elements inside in array
+// console.log(...arr); // but here individual elements shows
+
+// 2
+// const str = "hello";
+// console.log(str);
+// console.log([...str]);
+
+// 3
+// let names = ["manish","ajay","vijay","anuj"];
+
+// function getNames(names1,names2,names3,names4){
+//     console.log(names1,names2,names3,names4);
+// }
+
+// getNames(names); // Here you are passing the entire array as ONE argument
+// getNames(...names); // It breaks the array into individual values 
+
+//  Rest Operator
+// console.log("Rest Operator");
+
+//1
+// const func = (...data) => {
+//     console.log(data);
+    
+// }
+// func(10,20,30,40);
+
+//2
+// const data = {
+//     name : "manish",
+//     pass : "1234",
+//     age :  24
+// }
+// const{name, ...newObj} = data; // name key removed and object new name is newObj
+// console.log(newObj); 
+
+// 3
+// function addNumber(a,b,c,...other){
+//     console.log(other); // [4 5 6]  in form of arr
+//     console.log(other[0]); // 4
+//     return a+b+c;  // 6
+// }
+
+// const res = addNumber(1,2,3,4,5,6);
+// console.log(res);
+
 
 
 
@@ -150,7 +209,7 @@
 // let {name, phoneNo = 192} = person;
 // console.log(name, phoneNo);
 
-// **** Find Object length ****
+// ************************** Find Object length ************************************
 
 // 1 Object.keys
 
@@ -180,18 +239,17 @@
 //     name : "manish",
 //     course: "mern StaCK",
 // }
-// // console.log(Object.entries(obj)); // it converts an object into an array of key-value pairs and return it
-
-// 4 Object.fromEntries
+// console.log(Object.entries(obj)); // it converts an object into an array of key-value pairs and return it
+// 4 Object.fromEntries8=
 
 
 // let result = Object.entries(obj) // it is rrelated tu above method
 // console.log(result);
-// console.log(Object.fromEntries(result));  //it does the reverse—turning an array of key-value pairs back into an object.
+// console.log(Object.fromEntries(result));  //it does the REVERSE turning an array of key-value pairs back into an OBJECT.
 
 
 
-// 5. Object.assign
+// 5. Object.assign  (by this also we create a shallow copy )
 
 // let obj = {name:"abhishek"}
 // let obj1 = {id : 1}
@@ -307,7 +365,7 @@
 // let obj = {
 //     name:"manish"
 // }
-// Object.preventExtensions(obj)
+// Object.preventExtensions(obj)  
 // console.log(Object.isExtensible(obj));
 
 

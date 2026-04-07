@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Registration Form</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet"/>
+  <style>
+    * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  padding: 40px 16px;
+}
+
+.form-wrapper {
+  width: 100%;
+  max-width: 580px;
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-header h1 {
+  font-size: 28px;
+  color: #222;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+.form-card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 30px;
+}
+
+.form-section {
+  margin-bottom: 20px;
+}
+
+.section-label {
+  font-size: 13px;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.form-row {
+  display: flex;
+  gap: 14px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 14px;
+  width: 100%;
+}
+
+label {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="number"] {
+  width: 100%;
+  padding: 9px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fafafa;
+  color: #222;
+  outline: none;
+}
+
+input:focus {
+  border-color: #2d6a4f;
+}
+
+/* Radio buttons */
+.radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.radio-option:hover {
+  border-color: #2d6a4f;
+  background-color: #eaf5ed;
+}
+
+/* Terms checkboxes */
+.terms-row {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.terms-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #555;
+  cursor: pointer;
+}
+
+.terms-check a {
+  color: #2d6a4f;
+  text-decoration: none;
+}
+
+.terms-check a:hover {
+  text-decoration: underline;
+}
+
+/* Buttons */
+.btn-row {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.btn {
+  padding: 10px 24px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+}
+
+.btn-reset {
+  background-color: #ffffff;
+  color: #555;
+}
+
+.btn-reset:hover {
+  background-color: #f0f0f0;
+}
+
+.btn-submit {
+  background-color: #2d6a4f;
+  color: #ffffff;
+  border-color: #2d6a4f;
+}
+
+.btn-submit:hover {
+  background-color: #1b4332;
+}
+
+/* Success message */
+.success-msg {
+  display: none;
+  text-align: center;
+  padding: 12px;
+  margin-top: 16px;
+  background-color: #d8f3dc;
+  border: 1px solid #2d6a4f;
+  border-radius: 6px;
+  color: #2d6a4f;
+  font-size: 14px;
+}
+  </style>
+</head>
+<body>
+
+<div class="form-wrapper">
+  <div class="form-header">
+    <h1>Create Account</h1>
+  </div>
+ <hr class="divider" />
+  <div class="form-card">
+
+    <!-- Personal Info -->
+    <div class="form-section">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" placeholder="Jane" />
+        </div>
+        <div class="form-group">
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" placeholder="Smith" />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="jane@example.com" />
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" placeholder="+91 98765 43210" />
+        </div>
+        <div class="form-group">
+          <label for="dob">Date of Birth</label>
+          <input type="date" id="dob" />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="age">Age</label>
+        <input type="number" id="age" placeholder="25" min="1" max="120" />
+      </div>
+    </div>
+
+   
+
+    <!-- Gender -->
+    <div class="form-section">
+      <div class="section-label">Gender</div>
+      <div class="radio-group">
+        <label class="radio-option"><input type="radio" name="gender" value="male" /><span>Male</span></label>
+        <label class="radio-option"><input type="radio" name="gender" value="female" /><span>Female</span></label>
+        <label class="radio-option"><input type="radio" name="gender" value="other" /><span>Other</span></label>
+        <label class="radio-option"><input type="radio" name="gender" value="prefer_not" /><span>Prefer not to say</span></label>
+      </div>
+    </div>
+
+
+    <!-- Terms & Submit -->
+    <div class="terms-row">
+      <label class="terms-check">
+        <input type="checkbox" id="terms" />
+        I agree to the <a href="#">Terms &amp; Conditions</a> and <a href="#">Privacy Policy</a>
+      </label>
+      <label class="terms-check">
+        <input type="checkbox" />
+        Subscribe to newsletter and product updates
+      </label>
+    </div>
+
+    <div class="btn-row">
+      <button type="button" class="btn btn-reset" onclick="resetForm()">Reset</button>
+      <button type="button" class="btn btn-submit" onclick="submitForm()">Create Account</button>
+    </div>
+
+    <div class="success-msg" id="success-msg">
+      Registration successful! Welcome aboard.
+    </div>
+
+  </div>
+</div>
+
+<!-- <script>
+  const levels = ['', 'Beginner', 'Intermediate', 'Advanced', 'Expert'];
+
+  function updateRange(v) {
+    document.getElementById('range-out').textContent = levels[v];
+  }
+
+  function updateColor(v) {
+    document.getElementById('color-hex').textContent = v.toUpperCase();
+  }
+
+  function togglePwd(inputId, btnId) {
+    const input = document.getElementById(inputId);
+    const btn = document.getElementById(btnId);
+    if (input.type === 'password') {
+      input.type = 'text';
+      btn.textContent = 'Hide';
+    } else {
+      input.type = 'password';
+      btn.textContent = 'Show';
+    }
+  }
+
+  function submitForm() {
+    const terms = document.getElementById('terms');
+    if (!terms.checked) {
+      alert('Please agree to the Terms & Conditions to continue.');
+      return;
+    }
+    const msg = document.getElementById('success-msg');
+    msg.style.display = 'block';
+    msg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+
+  function resetForm() {
+    document.getElementById('success-msg').style.display = 'none';
+    document.getElementById('range-out').textContent = 'Intermediate';
+    document.getElementById('exp-range').value = 2;
+    document.getElementById('color-hex').textContent = '#2D6A4F';
+    document.getElementById('color-pick').value = '#2d6a4f';
+    ['pwd', 'cpwd'].forEach(id => {
+      document.getElementById(id).type = 'password';
+    });
+    document.getElementById('toggle-pwd').textContent = 'Show';
+    document.getElementById('toggle-cpwd').textContent = 'Show';
+  }
+</script> -->
+
+</body>
+</html>

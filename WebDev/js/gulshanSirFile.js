@@ -1808,11 +1808,11 @@
 // false:- no add new properties in object
 // true:- add new properties in object
 
-// let obj = {
-//     name: "abc"
-// }
-// Object.preventExtensions(obj)
-// console.log(Object.isExtensible(obj));
+let obj = {
+    name: "abc"
+}
+Object.preventExtensions(obj)
+console.log(Object.isExtensible(obj));
 
 
 
@@ -2158,7 +2158,6 @@
 // }
 // localStorage.setItem("user",JSON.stringify(obj))
 
-
 // let data = localStorage.getItem("user");
 // console.log(JSON.parse(data));
 // // output will show on browser terminal
@@ -2169,4 +2168,27 @@
 // localStorage.clear() 
 
 
+// Session Storage
+// Save form input
+// sessionStorage.setItem("username", "Manish");
 
+// // Get data
+// let user = sessionStorage.getItem("username");
+// console.log(user);
+
+
+
+
+// navigator
+
+// if(!navigator.onLine){
+//     alert("You are offline!");
+// }
+
+// // location
+
+// let isLoggedIn = true;
+
+// if(isLoggedIn){
+//     location.href = "dashboard.html";
+// }
