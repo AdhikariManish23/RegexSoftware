@@ -1,145 +1,138 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registration Form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registeration Form</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-    }
+    <style>
+      *{
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+      }
 
-    body {
-      background-color: #f4f4f4;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-    }
+      body{
+        background-color: antiquewhite;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 50px;
+      }
 
-    .form-card {
-      background: #fff;
-      padding: 25px;
-      width: 100%;
-      max-width: 400px;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    .form-card h2 {
-      text-align: center;
-      margin-bottom: 20px;
-      color: #333;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-    }
-
-    label {
-      margin-top: 12px;
-      font-size: 20px;
-      color: #555;
-    }
-
-    input {
-      margin-top: 5px;
-      padding: 10px;
-      border: 3px solid #ccc;
-      border-radius: 6px;
-      font-size: 14px;
-    }
-
-    input:focus {
-      border-color: #2d6a4f;
-      outline: none;
-    }
-
-    /* Gender section */
-    .gender-group {
-      margin-top: 10px;
-    }
-
-    .gender-group label {
-      margin-right: 10px;
-      font-size: 14px;
-    }
-
-    .gender-group input {
-      margin-right: 5px;
-    }
-
-    button {
-      margin-top: 20px;
-      padding: 10px;
-      background-color: #2d6a4f;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      font-size: 15px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #1b4332;
-    }
-  </style>
+      h2{
+        margin: 20px;
+        color: rgb(52, 89, 255);
+      }
+      
+      #myForm{
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        border: 2px solid #d41919;
+        box-shadow: 0 10px 30px rgba(212, 25, 25, 0.5);
+        width: 300px;
+      }
+      button{
+        /* background-color: #e43c3c; */
+        width: 80px;
+        height: 30px;
+      }
+    </style>
 </head>
 <body>
 
-  <div class="form-card">
-    <h2>Personal Information</h2>
+<h2>Registration Form</h2>
 
-    <form>
+<form id="myForm">
 
-      <label for="firstName">First Name</label>
-      <input type="text" id="firstName" name="firstName" placeholder="Enter first name">
+    <!-- Name -->
+    <label>Name:</label><br>
+    <input type="text" name="name" id="name" ><br><br>
 
-      <label for="lastName">Last Name</label>
-      <input type="text" id="lastName" name="lastName" placeholder="Enter last name">
+    <!-- Email -->
+    <label>Email:</label><br>
+    <input type="email" name="email" id="email" ><br><br>
 
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" placeholder="Enter email">
+    <!-- Password -->
+    <label>Password:</label><br>
+    <input type="password" name="password" id="password"><br><br>
 
-      <label for="phone">Phone Number</label>
-      <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210">
+    <!-- Confirm Password -->
+    <label>Gender:</label><br>
 
-      <!-- Gender -->
-      <div class="gender-group">
-        <label>Gender:</label><br>
+<label>
+    <input type="radio" name="gender" value="Male"> Male
+</label>
 
-        <input type="radio" id="male" name="gender" value="male">
-        <label for="male">Male</label>
+<label>
+    <input type="radio" name="gender" value="Female"> Female
+</label>
 
-        <input type="radio" id="female" name="gender" value="female">
-        <label for="female">Female</label>
+<label>
+    <input type="radio" name="gender" value="Other"> Other
+</label><br><br>
 
-        <input type="radio" id="others" name="gender" value="others">
-        <label for="others">Others</label>
-      </div>
+    <!-- Hobbies -->
+    <label>Hobbies:</label><br>
+    <input type="checkbox" name="hobbies" value="Reading"> Reading
+    <input type="checkbox" name="hobbies" value="Sports"> Sports
+    <input type="checkbox" name="hobbies" value="Music"> Music<br><br>
 
-      <label for="dob">Date of Birth</label>
-      <input type="date" id="dob" name="dob">
+    <!-- Country -->
+    <label>Country:</label><br>
+    <select name="country" id="country">
+        <option value="">Select Country</option>
+        <option value="India">India</option>
+        <option value="USA">USA</option>
+        <option value="UK">UK</option>
+        <option value="Canada">Canada</option>
+    </select><br><br>
 
-      <label for="file">Upload File</label>
-      <input type="file" id="file" name="file">
+    <!-- Date of Birth -->
+    <label>Date of Birth:</label><br>
+    <input type="date" name="dob" id="dob"><br><br>
 
-      <button type="submit">Submit</button>
+    <!-- Profile Image -->
+    <label>Upload Profile Image:</label><br>
+    <input type="file" name="profileImage" id="profileImage"><br><br>
 
-    </form>
-  </div>
+    <!-- Description -->
+    <label>Description:</label><br>
+    <textarea name="description" id="description" rows="4" cols="30"></textarea><br><br>
+
+    <!-- Submit -->
+    <button type="submit">Submit</button>
+
+</form>
+
 
 </body>
-<script>
-    let a = document.querySelector("h2");
-    a.style.color="red";
 
+<script>
+
+  let form = document.querySelector("#myForm").addEventListener("submit" , (e) => {
+      e.preventDefault();
+
+      let name = document.getElementById("name").value;
+      console.log("Name : ",name);
+
+      let email = document.getElementById("email").value;
+      console.log("Email : ",email);
+
+      let pass = document.getElementById("password"),value;
+      console.log("Password : ", pass);
+
+      let country = document.getElementById("country").value;
+      console.log("Country : ", country);
+      
+      let desc = document.getElementById("description").value;
+      console.log("Description : ",desc);
+      
+      
+      
+      
+  })
 </script>
 </html>
-

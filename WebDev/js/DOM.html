@@ -7,13 +7,25 @@
 </head>
 <body>
     
-    <div id="abc">Content1</div>
+    <!-- <div id="abc">Content1</div>
     <div class="xyz">Content2</div>
     <div class="xyz">Content3</div>
     <p id="pg">Content 4</p>
     <h2>Headiing 2 Change Style</h2>
     <a href="http://google.com/?zx=1775450358044"> got to google</a> 
 
+
+    <div id="parent">
+        <div id="child1">Child 1</div>
+        <div id="child2">Child 2</div>
+        <div id="child3">Child 3</div>
+    </div> -->
+
+    <!-- INLINE Event -->
+    <!-- <div onclick="abc()">Hello JS</div> -->
+
+    <button id="abc">SUBMIT</button>
+    <div id="abd">hello</div>
 
     <script>
         // let a = document.getElementById("abc");
@@ -25,33 +37,87 @@
         // let c = document.getElementsByTagName("div");
         // console.log(c);
 
-        // Modern technique to Access Element
+        // ********************Modern technique to Access Element :
 
         // let result1 = document.querySelector("#abc");
         // let result2 = document.querySelector(".xyz"); // return first element
         // let result3 = document.querySelectorAll(".xyz") // return array format
 
-        // .textContent : used to isert a text
+        // ********************.textContent : used to isert a text :
 
         // let result1 = document.querySelector("#abc");
         // result1.textContent = "manish";
 
-        // .innerHTML : to insert a new html tag
-
+        // ********************.innerHTML : to insert a new html tag : 
+        // NOTE : it is used on existitng tag to add more features or remove the exisiting element 
         //  let result1 = document.querySelector("#abc");
         // result1.innerHTML = "<h1> Manish </h1>";
         
-        // get and set ATTRIBUTE
+        // ********************get,set and remove ATTRIBUTE :
+ 
         // let print = document.querySelector("a");
-        // // console.log(print);
-        // // console.log(print.getAttribute("href"));
-        // console.log(print.setAttribute("href", "https://www.facebook.com/"))
+        // console.log(print);
+        // console.log(print.getAttribute("href"));
         
-        // change STYLE
+        // console.log(print.setAttribute("href", "https://www.facebook.com/"))
+    
+        // let result = document.querySelector("a");
+        // result.removeAttribute("href");
 
-        let res = document.querySelector("h2");
-        res.style.color="red";
-        res.style.background="yellow";
+        // ********************change STYLE :
+
+        // let res = document.querySelector("h2");
+        // res.style.color="red";
+        // res.style.background="yellow";
+
+        // ********************remove tags :
+
+        // let result1 = document.querySelector("div");
+        // result.remove();
+
+        // let result2 = document.querySelectorAll("div");
+        // result2[1].remove();
+        // or run a loop to remove 
+
+        // remove child :
+        // let result = document.querySelector("#child1");
+        // result.remove();
+        //                 OR
+        // let result = document.querySelector("#parent");
+        // let child = document.querySelector("#child2");
+        // result.removeChild(child);
+
+        // ******************** create Element  (create new elemnet does not remove existing element )
+        // let result = document.createElement("div");
+        //     result.textContent = "hello JavaScript"
+        //     console.log(result);
+
+        //     document.body.append(result);
+        
+       // ************ events 
+    
+    //    function abc(){ // inline event
+    //     console.log("click click");
+        
+    //    }
+
+       // addEventListner(event,function)
+
+       let result = document.getElementById("abc");
+       result.addEventListener("click",()=>{
+        console.log("Form Submited");
+       })
+
+
+        // dblclick not Woring        
+       let result2 = document.getElementById("abd")
+        result2.addEventListener("dblclick",()=>{
+            console.log("double click");
+            
+       })
+
+       
+
 
         
     </script>
