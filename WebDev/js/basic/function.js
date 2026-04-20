@@ -1,4 +1,6 @@
-// function declaration 
+// **************************** Function declaration *****************
+
+
 // function abc(a,b){
 //     console.log(a,b);
 // }
@@ -11,7 +13,8 @@
 // abcd(2)
 
 
-// Expression Function // Annonymus functions
+// ******************** Expression Function // Annonymus functions **************************
+
 // let a  = function (a,b){
 //     let c = a+b
 //     return c
@@ -35,14 +38,11 @@
 // evenOrOdd(7)
 
 // function countDigit(b){
-    
 //     let count = 0;
 //     while(b> 0){
 //     count+=1;
 //     let digit = b %10;
-    
 //     b = (b-digit) / 10;
-    
 // }
 // return count;
 // }
@@ -50,7 +50,7 @@
 // console.log(countDigit(243232));
 
 
-// Arrow Functions
+// ********************** Arrow Functions ********************************
 
 // let abs = (a,b) => a*b
 // console.log(abc(10,20));
@@ -62,15 +62,17 @@
 //   return a*b }
 // console.log(abc(10,20));
 
-// IIFE (immediately invoke function express)               
+// *****************IIFE (immediately invoke function express) *******************               
+
 // (function () {
 //     console.log("Hello");
     
 // })();
 
+
 // 7. rest parameter function or spread
-function abs(...a){
-    console.log(a);
+// function abs(...a){
+//     console.log(a);
     
-}
-abs(10,20,30,40)
+// }
+// abs(10,20,30,40)

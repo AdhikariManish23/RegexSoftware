@@ -267,10 +267,14 @@
 // }, {});
 // console.log(freq);
 
+
+// EXAMPLE :
 // let arr = [5, 12, 3, 21, 8];
 // let max = arr.reduce((acc, curr) => {
 //     return Math.max(acc, curr);
 // }, -Infinity);
+// console.log(max);
+
 
 // 25. flatmap():-
 
@@ -279,9 +283,9 @@
 // console.log(arr1);
 
 
-// 26. for...of
+// 26. for...of  (it gives values AND for...in gives index in ARRAY / in Object it returns key )
 // let abc = [1,2,3,4];
-// for(let val of abs){
+// for(let val of abc){
 //     console.log(val); 
 // }
 
@@ -293,7 +297,7 @@
 // console.log(abc2);
 
 
-// 28. some()   if any valu is true to condition then it return true
+// 28. some()   if any value is true to condition then it return true
 // let abc = [1,6,3,4];
 // let abc2 = abc.some((val) => val >5)
 // console.log(abc2);
@@ -358,7 +362,7 @@
 
 //  DESTRUCTURING --->
 
-let arr=[10,20,30,40]
+// let arr1=[10,20,30,40]
 
 // type - 1
 // let [a,b,c,d]=arr
@@ -369,8 +373,12 @@ let arr=[10,20,30,40]
 
 // type - 2
 // let [first,second,...abc]=arr1
-// console.log(first,second,abc);
+// console.log(first,second,abc);  // return values first and second remainig it gives in new array form
 
 // type-3
 // let [first, ,second] = arr1
-// console.log(second);
+// console.log(second); // , ,  by this we skip the value 
+
+
+
+

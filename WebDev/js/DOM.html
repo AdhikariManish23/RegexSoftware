@@ -24,10 +24,64 @@
     <!-- INLINE Event -->
     <!-- <div onclick="abc()">Hello JS</div> -->
 
-    <button id="abc">SUBMIT</button>
-    <div id="abd">hello</div>
+    <!-- <button id="abc">SUBMIT</button>
+    <div id="abd">hello</div> -->
+
+
+    <!--Event bubbling / capturing  -->
+    <!-- Event bubbling means the event starts from the target element and then moves upward to its parent elements. -->
+     <!-- Event capturing means the event starts from the top (root) and goes downward to the target element. -->
+<div id="Gparent">
+    <div id="parent">
+        <div id="child">
+            Child
+        </div>
+    </div>
+</div>
+
+<!--  Event Delegacy -->
+<!-- Event delegation means attaching a single event listener to a parent element to handle events of its child elements. -->
+<ul>
+    <li>List 1</li>
+    <li>List 2</li>
+    <li>List 3</li>
+    <li>List 4</li>
+    <li>List 5</li>
+</ul>
 
     <script>
+        //  Event Bubbling
+        // document.getElementById("Gparent").addEventListener("click", (e) => {
+        //     console.log("Click GrandParent");
+        // })
+
+        // document.getElementById("parent").addEventListener("click", (e) => {
+        //     console.log("Click Parent");
+        // })
+        // document.getElementById("child").addEventListener("click", (e) => {
+        //     console.log("Click Child");
+        // })
+
+
+        // Event Capturing
+        // document.getElementById("Gparent").addEventListener("click", (e) => {
+        //     console.log("Click GrandParent");
+        // },true)
+
+        // document.getElementById("parent").addEventListener("click", (e) => {
+        //     console.log("Click Parent");
+        // },true)
+        // document.getElementById("child").addEventListener("click", (e) => {
+        //     console.log("Click Child");
+        // })
+
+
+        // Event Delegacy
+        // document.querySelector("ul").addEventListener("click",(e)=>{
+        //     console.log(e.target.innerText);
+        // })
+
+
         // let a = document.getElementById("abc");
         // console.log(">>>>>>>>>>>>>>>>>>>>>>",a);
 
@@ -103,18 +157,18 @@
 
        // addEventListner(event,function)
 
-       let result = document.getElementById("abc");
-       result.addEventListener("click",()=>{
-        console.log("Form Submited");
-       })
+    //    let result = document.getElementById("abc");
+    //    result.addEventListener("click",()=>{
+    //     console.log("Form Submited");
+    //    })
 
 
-        // dblclick not Woring        
-       let result2 = document.getElementById("abd")
-        result2.addEventListener("dblclick",()=>{
-            console.log("double click");
+    //     // dblclick not Woring        
+    //    let result2 = document.getElementById("abd")
+    //     result2.addEventListener("dblclick",()=>{
+    //         console.log("double click");
             
-       })
+    //    })
 
        
 

@@ -45,7 +45,7 @@
 
 <h2>Registration Form</h2>
 
-<form id="myForm">
+<form id="myForm" method="GET" action="">
 
     <!-- Name -->
     <label>Name:</label><br>
@@ -103,7 +103,7 @@
     <textarea name="description" id="description" rows="4" cols="30"></textarea><br><br>
 
     <!-- Submit -->
-    <button type="submit">Submit</button>
+    <button type="submit" value="submit">Submit</button>
 
 </form>
 
@@ -130,9 +130,8 @@
       let desc = document.getElementById("description").value;
       console.log("Description : ",desc);
       
-      
-      
-      
   })
+
+  
 </script>
 </html>

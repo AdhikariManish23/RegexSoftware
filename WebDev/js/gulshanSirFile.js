@@ -1498,7 +1498,7 @@
 
 // console.log(obj);
 
-// 3. constractor function
+// 3. constructor function
 
 // function abc(id, name, course) {
 //     this.id = id;
@@ -1564,7 +1564,7 @@
 // }
 // console.log(obj);
 
-// ** nested object
+// ******* nested object
 
 // let obj = {
 //     id: 1,
@@ -1601,7 +1601,7 @@
 //     course: "mern stack",
 // address: {
 //     city: "jaipur"
-// }
+//     }
 // }
 // let obj1 = obj
 // let obj1 = { ...obj }
@@ -1687,7 +1687,7 @@
 // console.log(Object.entries(obj));
 // let result = Object.entries(obj)
 
-// 4. object.fromEntries
+// // 4. object.fromEntries
 
 // console.log(result);
 
@@ -1808,11 +1808,11 @@
 // false:- no add new properties in object
 // true:- add new properties in object
 
-let obj = {
-    name: "abc"
-}
-Object.preventExtensions(obj)
-console.log(Object.isExtensible(obj));
+// let obj = {
+//     name: "abc"
+// }
+// Object.preventExtensions(obj)
+// console.log(Object.isExtensible(obj));
 
 
 
@@ -1846,7 +1846,7 @@ console.log(Object.isExtensible(obj));
 
 // *** nullish coalesicing operator (??): null / undefined
 
-// let name = 0
+// let name = 1;
 // let b = name ?? "Guest"
 // console.log(b);
 
@@ -1920,7 +1920,123 @@ console.log(Object.isExtensible(obj));
 // }
 // console.log(JSON.stringify(obj)); // convert the Object into string
 
-// *****  PROMISE ****
+// ************************************* PROMISE *******************************
+
+// Creation 1
+// const promiseOne =new Promise (function(resolve,reject) {
+//     setTimeout(function(){
+//         console.log("Async Task Created1");
+//         resolve();
+//     },2000);
+// })
+
+// promiseOne.then(function(){
+//     console.log("promise don1");
+    
+// })
+
+
+// CREATION 2
+// new Promise (function(resolve,reject) {
+//     setTimeout(function(){
+//         console.log("Async Task Created2");
+//         resolve();
+//     },2000);
+// }).then(function(){
+//     console.log("promise done2");
+    
+// })
+
+// CREATION 3 (with this we can access any data that is come in promise )
+// const promiseThree = new Promise(function(resolve,reject){
+//     setTimeout(function(){
+//         resolve("Namaste jii")
+//     },1000)
+// })
+
+// promiseThree.then((user)=>{
+//     console.log(user);
+    
+// })
+
+// CREATION 4 (using reject)
+// const promiseFour = new Promise(function(resolve,reject){
+//     let a =false;
+//     if(a){
+//         resolve("Succesfully catch data")
+//     }
+//     else{
+//         reject("ERROR")
+//     }
+// })
+// promiseFour.then((resolve) =>{
+//     console.log(resolve);
+// }).catch((reject)=>{
+//     console.log(reject);
+    
+// }).finally(()=>{
+//     console.log("Work is Done");
+    
+// })
+
+
+// CREATION 5 (using async and await)
+
+// const promiseFive = new Promise(function(resolve,reject){
+//     let a =true;
+//     if(a){
+//         resolve("Succesfully catch data")
+//     }
+//     else{
+//         reject("ERROR: hogya jii")
+//     }
+// })
+
+// async function consumedPromise() {
+//     try {
+//         const response = await promiseFive;
+//         console.log(response);
+        
+//     } catch (error) {
+//         console.log(error);
+        
+//     }
+// }
+// consumedPromise();
+
+
+// API k sath async or await
+
+// async function getAllUsers() {
+//         try {
+//             let response = await fetch('https://jsonplaceholder.typicode.com/todos/1')
+//             let data = await response.json()
+//             console.log(data);
+            
+//         } catch (error) {
+//             console.log(error);
+            
+//         }
+// }
+// getAllUsers()
+
+// Handling APIS Without async await
+
+// fetch('https://jsonplaceholder.typicode.com/todos/1')
+// .then((response)=>{
+//     return response.json();
+// })
+// .then((data)=>{
+//     console.log(data);
+    
+// })
+// .catch((error) =>{
+//     console.log(error);
+    
+// })
+
+
+// Stages of Prmoises :
 
 // 1 Pending
 // 2 Fulfiled or Resolved
@@ -1974,10 +2090,9 @@ console.log(Object.isExtensible(obj));
 // 3. Promis.all()  is used when you want to run multiple promises in parallel and wait until all of them finish successfully.  if one promise is reject its immediately fails and show the error
 
 // let a = Promise.resolve(1)
-// let b = Promise.resolve(2)
-// let c = Promise.reject("error")
+// let b = Promise.resolve("chl gya")
+// let c = Promise.reject("nhi chla na")
 // // let c = Promise.reject(3)
-
 
 // Promise.all([a,b,c]).then( res => console.log(res))
 //         .catch(err => console.log(err))
@@ -1989,7 +2104,6 @@ console.log(Object.isExtensible(obj));
 // let b = Promise.resolve(2)
 // let c = Promise.reject("error")
 // // let c = Promise.reject(3)
-
 
 // Promise.allSettled([a,b,c]).then( res => console.log(res))
 //         .catch(err => console.log(err))
@@ -2047,21 +2161,23 @@ console.log(Object.isExtensible(obj));
 
 // function outer()
 // {
-//     let a=0;
+//     let a=10;
+//     console.log("outer",a);
+    
 //   return  function inner()
 //     {
-//         console.log(a);
+//         console.log("inner",a);
 //         a++;
         
 //     }
-//     inner()
+
 // }
 
 // let result=outer()
 
 //     result()
 //     result()
-//      result()
+//     result()
 //     result()
 
 
@@ -2096,19 +2212,17 @@ console.log(Object.isExtensible(obj));
 // async type 
 
 
-// // async function abc() {
-// //     try{
-// //         let result=await fetch('https://jsonplaceholder.typicode.com/todos')
-// //         let upadteResult = await result.json()
-// //         console.log(upadteResult)
-// //     }
-// //     catch(err)
-// //     {
-// //         console.log(err);
-        
-// //     }
-    
-// // }
+// async function abc() {
+//     try{
+//         let result=await fetch('https://jsonplaceholder.typicode.com/todos')
+//         let upadteResult = await result.json()
+//         console.log(upadteResult)
+//     }
+//     catch(err)
+//     {
+//         console.log(err);  
+//     }
+// }
 // abc()
 
 
@@ -2176,8 +2290,8 @@ console.log(Object.isExtensible(obj));
 // let user = sessionStorage.getItem("username");
 // console.log(user);
 
-
-
+// cookies ??? 
+// document.cookie = "user=Manish; max-age=3600";
 
 // navigator
 
@@ -2192,3 +2306,28 @@ console.log(Object.isExtensible(obj));
 // if(isLoggedIn){
 //     location.href = "dashboard.html";
 // }
+
+
+
+
+
+// Ayushman Sir Task
+// let obj  = {
+//     name : "manish",
+//     age : 25,
+//     print: function(){
+//         console.log(this.name);
+        
+//     },
+
+//     print2: ()=>{
+//         console.log(this.name);
+//     }
+// }
+
+// obj.print();
+// obj.print2();
+
+
+
+
