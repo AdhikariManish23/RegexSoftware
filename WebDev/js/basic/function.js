@@ -76,3 +76,51 @@
     
 // }
 // abs(10,20,30,40)
+
+
+
+//  *********************************** High Order Function ****************************************
+// function greet(name){
+//     return "Hello " + name;
+// }
+
+// function userInput1(callback){
+//     return callback("this is example of HOF");
+// }
+
+// console.log(userInput1(greet));
+
+// NOTE : here userInput is HOF because it takes another function as an argument or return a functions
+
+// ************************************ Call back Function ***************************************
+
+// function greet(name) {
+//   return "Hello " + name;
+// }
+
+// function userInput2(callback) {
+//   return callback("this is a example of callback");
+// }
+
+// console.log(userInput2(greet));
+
+// NOTE : here greet is a callback functin because it is passsed to another function.
+
+
+// ************************** Rest Operator *************************
+// function test(...arguments){
+//     console.log(arguments);
+// }
+
+// test(1,2,3,5,6,7,8);
+
+// *************************** CURRYING *******************
+// Currying converts a function with multiple arguments into multiple functions with one argument each.
+
+function add(a) {
+  return function(b) {
+    return a + b;
+  };
+}
+
+console.log(add(2)(3)); // 5

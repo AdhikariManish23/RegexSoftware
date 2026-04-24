@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Form Validation</title>
+</head>
+<body>
+
+<form id="myForm">
+    
+    <label>FirstName</label><br>
+    <input type="text" id="name"><br>
+    <p id="nameError" style="color:red;"></p>
+
+    <label>Email</label><br>
+    <input type="email" id="email"><br>
+    <p id="emailError" style="color:red;"></p>
+
+    <label>Password</label><br>
+    <input type="password" id="password"><br>
+    <p id="passwordError" style="color:red;"></p>
+
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+document.getElementById("myForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+
+    // Clear old errors
+    document.getElementById("nameError").innerText = "";
+    document.getElementById("emailError").innerText = "";
+    document.getElementById("passwordError").innerText = "";
+
+    let isValid = true;
+
+    // Name validation
+    if(name === ""){
+        document.getElementById("nameError").innerText = "Name is required";
+        isValid = false;
+    }
+
+    // Email validation
+    if(email === ""){
+        document.getElementById("emailError").innerText = "Email is required";
+        isValid = false;
+    }
+
+    // Password validation
+    if(password === ""){
+        document.getElementById("passwordError").innerText = "Password is required";
+        isValid = false;
+    }
+
+    // If all valid
+    if(isValid){
+        alert("Form submitted successfully!");
+    }
+});
+</script>
+
+</body>
+</html>

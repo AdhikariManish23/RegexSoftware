@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- Question 4  (make a buttons increase the count on click + and decrease the button on - and also there is reset button to again set count 0)------------->
+    
+    <h2> Counter : <span id="count">0</span></h2>
+    <button id="plus">+</button>
+    <button id="minus">-</button>
+    <button id="reset">Reset</button>
+
+    <script>
+        let count = 0;
+        
+        let countDisplay =document.getElementById("count");
+        let plusBtn =document.getElementById("plus");
+        let minusBtn =document.getElementById("minus");
+        let resetBtn =document.getElementById("reset");
+
+        plusBtn.addEventListener('click',() =>{
+            count = count + 1;
+            countDisplay.innerHTML = count;
+        });
+
+        minusBtn.addEventListener('click',() =>{
+            count = count - 1;
+            countDisplay.innerHTML = count;
+        });
+
+        resetBtn.addEventListener('click',() =>{
+            count = 0;
+            countDisplay.innerHTML = count;
+        });
+
+
+    </script>
+</body>
+</html>
