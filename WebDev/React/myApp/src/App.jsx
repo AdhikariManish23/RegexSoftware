@@ -1,13 +1,13 @@
-import React from 'react'
+import React, {useState} from 'react'
+import Form from './form'
 
 const App = () =>{
-  return (
-    <div>
-      <p>
-        Paragraph
-      </p>
-    </div>
+  return(
+    <>
+    <Form/>
+    </>
   )
+
 }
 
 export default App

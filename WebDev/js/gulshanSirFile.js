@@ -2193,7 +2193,7 @@
 // }
 
 
-// async :- promise return karta hai
+// // async :- promise return karta hai
 
 // async function abc() {
 //     let result =await getData()
