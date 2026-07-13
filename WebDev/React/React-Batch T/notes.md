@@ -33,3 +33,9 @@ Another way is when ypu have multiple function or you want to export through nam
 Props Drilling like nested 
 
 state is synchornus and setState is asynchronus
+We use state to store DATA
+Multiple and Single state
+how we achieve multiple state by creating a Object and store the state in the Object 
+
+what (e) is it is an event when we click on something
+in dynamic hooks or useState name and hooks name will be same by this they will connect 

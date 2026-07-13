@@ -1,5 +1,11 @@
 import React, { useState } from 'react'
 import Form from './Form'
+import FormTwo from './FormTwo'
+import SecondComponent from './SecondComponent'
+import ThirdComponent from './ThirdComponent'
+
+
+
 const App = () => {
 
   // const [state, setState] = useState(0)
@@ -25,15 +31,31 @@ const App = () => {
   // const reset = ()=>{
   //   setState(0)
   // }
+
+
+// *************** CustomHooks ******
+
+
   return (
     <div>
 
-    <Form/>
+    {/* <Form/> */}
 
+    {/* <FormTwo/> */}
+    
       {/* <h1>{state}</h1>
       <button onClick={increaseButton}>+</button>
       <button onClick={decrementButton}>-</button>
       <button onClick={reset}>Reset</button> */}
+
+      {/* <SecondComponent/> */}
+
+      {/* <ThirdComponent/> */}
+
+      {/* <FourthComponent/> */}
+
+
+
     </div>
   )
 }

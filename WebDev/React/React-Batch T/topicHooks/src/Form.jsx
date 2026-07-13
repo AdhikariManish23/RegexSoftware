@@ -1,24 +1,31 @@
 import React, { useState } from 'react'
+// import './index.css'
 
 const Form = () => {
-        const [name,setName]       = useState("")
-        const [email,setEmail]     = useState("")
-        const [dob,setDob]         = useState("")
-        const [gender,setGender]   = useState("")
-        const [country,setCountry] = useState("")
-        const [message,setMessage] = useState("")
+        //  Multiple State
+        const [name,setName]         = useState("")
+        const [email,setEmail]       = useState("")
+        const [dob,setDob]           = useState("")
+        const [gender,setGender]     = useState("")
+        const [country,setCountry]   = useState("")
+        const [message,setMessage]   = useState("")
+        const [profile,setProfile]   = useState("")
+        const [password,setPassword] = useState("")
+
 
         const submitHandler = (e)=>{
                 e.preventDefault()
 
-                console.log(name, email, dob, gender,country,message)
+                console.log(name, email , password , dob, gender,country,message,profile)
         }
 
   return (
-    <div style={{display : "flex" , justifyContent: "center"}}>
-      <form onSubmit={submitHandler}>
+    <div>
+      <form onSubmit={submitHandler} className="">
         <label htmlFor='name'>Name : </label>
         {/* <input type="text" name='name' id='name' onChange={(e)=>console.log(e)}/>  for understanding how we getting the value  */}
+
+        
         <input type="text" name='name' id='name' onChange={(e)=>setName(e.target.value)}/>
 
 <br />
@@ -28,6 +35,13 @@ const Form = () => {
 
 <br />
 <br />
+
+        <label htmlFor="password">Password : </label>
+        <input type="password" name='password' id='password' onChange={(e) => setPassword(e.target.value)} />
+
+<br />        
+<br />        
+
         <label htmlFor='dob'>D.O.B : </label>
         <input type="date" name='dob' id='dob' onChange={(e)=>setDob(e.target.value)}/>
 <br />
@@ -47,9 +61,12 @@ const Form = () => {
 <br />
 <br />
         <label >Message : </label>
-        <textarea name="message" onChange={(e) => setMessage(e.target.value)}>
+        <textarea name="message" onChange={(e) => setMessage(e.target.value)}></textarea>
+<br />
+<br />
+        <label>Upload Profile : </label>
+        <input type="file" name='upload Profile' onChange={(e)=>setProfile(e.target.value)}/>
 
-        </textarea>
 <br />
 <br />
 
