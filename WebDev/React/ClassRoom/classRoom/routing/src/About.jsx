@@ -9,7 +9,8 @@ const About = () => {
 
   return (
     <div>
-      About Page {location.state.name}
+      <h1>this is about page</h1>
+      About Page {location.state?.name}
     </div>
   )
 }

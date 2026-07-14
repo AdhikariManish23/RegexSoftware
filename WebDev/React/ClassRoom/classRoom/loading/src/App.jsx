@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 
 const App = () => {
 
+// Example 1
+
 //   const [loading, setLoading] = useState(true)
 
 //   useEffect(()=>{
@@ -16,10 +18,13 @@ const App = () => {
 
 //   return (
 //     <div>
-//       Data
+//       <h1>Data Mill gya</h1> 
 //     </div>
 //   )
 // }
+
+
+// Example 2
 
 const [data, setData] = useState(null);
 const [loading, setLoading] = useState(true);
@@ -36,7 +41,7 @@ useEffect(() => {
   fetchData();
 }, []);
 
-if (loading) {
+if (loading) {  // jb tk loading true hai tb tk yeah text print hoga jaise he false hua iska matlab API se data aagya hai 
   return <h1>Loading...</h1>;
 }
 
